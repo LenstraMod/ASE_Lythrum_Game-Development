@@ -3,13 +3,13 @@ using UnityEngine;
 [System.Serializable]
 public struct PlayerSnapshot
 {
-    //Primary Key
+    // Primary Key
     public float timestamp;
 
-    //Position
+    // Position
     public Vector3 position;
 
-    //Buttons (If needed later)
+    // Buttons (If needed later)
     public bool isAttacking;
     public bool isInteracting;
 
