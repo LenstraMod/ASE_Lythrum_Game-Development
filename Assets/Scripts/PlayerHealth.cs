@@ -7,6 +7,8 @@ public class PlayerHealth : MonoBehaviour
     
     private Vector3 respawnPoint;
 
+    public bool isInvincible = false;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -15,6 +17,13 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+
+        if (isInvincible) 
+        {
+            Debug.Log("Damage dodged!");
+            return; 
+        }
+        
         currentHealth -= damage;
         Debug.Log("Player took damage! Current Health: " + currentHealth);
 
