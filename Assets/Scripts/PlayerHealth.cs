@@ -9,6 +9,9 @@ public class PlayerHealth : MonoBehaviour
 
     public bool isInvincible = false;
 
+    public int CurrentHealth => currentHealth;
+    public Vector3 RespawnPoint => respawnPoint;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -49,5 +52,13 @@ public class PlayerHealth : MonoBehaviour
     {
         respawnPoint = newCheckpointPosition;
         Debug.Log("Checkpoint updated to: " + respawnPoint);
+    }
+
+    // Dipanggil saat Load Game: kembali ke checkpoint tersimpan dengan HP tersimpan.
+    public void RestoreState(int health, Vector3 checkpoint)
+    {
+        respawnPoint = checkpoint;
+        transform.position = checkpoint;
+        currentHealth = Mathf.Clamp(health, 1, maxHealth);
     }
 }
