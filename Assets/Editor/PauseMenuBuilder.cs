@@ -31,24 +31,23 @@ public static class PauseMenuBuilder
         MainMenuSceneBuilder.Place(panel, Vector2.zero, Vector2.one, Vector2.zero, Vector2.zero);
         panel.gameObject.AddComponent<Image>().color = new Color(0f, 0f, 0f, 0.55f);
 
-        RectTransform box = MainMenuSceneBuilder.CreatePanel(panel, "Box", new Vector2(560f, 560f));
+        MainMenuSceneBuilder.ConfigurePaperSheet();
+        RectTransform box = MainMenuSceneBuilder.CreatePaperPanel(panel, "Box", new Vector2(600f, 580f), "Paused", font);
         var top = new Vector2(0.5f, 1f);
-
-        var header = MainMenuSceneBuilder.CreateText(box, "Header", "Paused", font, null, 64f, TextAlignmentOptions.Center);
-        MainMenuSceneBuilder.Place(header.rectTransform, top, top, new Vector2(0f, -35f), new Vector2(480f, 90f));
 
         string[] labels = { "Resume", "Save Game", "Main Menu", "Quit" };
         var buttons = new Button[labels.Length];
         for (int i = 0; i < labels.Length; i++)
         {
             buttons[i] = MainMenuSceneBuilder.CreateButton(box, labels[i].Replace(" ", "") + "Button", labels[i], font, null, 0);
-            MainMenuSceneBuilder.Place((RectTransform)buttons[i].transform, top, top, new Vector2(0f, -150f - i * 76f), new Vector2(400f, 64f));
+            MainMenuSceneBuilder.Place((RectTransform)buttons[i].transform, top, top, new Vector2(0f, -120f - i * 76f), new Vector2(400f, 64f));
             buttons[i].GetComponent<TMP_Text>().alignment = TextAlignmentOptions.Center;
+            MainMenuSceneBuilder.ApplyInkStyle(buttons[i]);
         }
 
         var status = MainMenuSceneBuilder.CreateText(box, "Status", "", font, null, 30f, TextAlignmentOptions.Center);
-        MainMenuSceneBuilder.Place(status.rectTransform, new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0f, 25f), new Vector2(480f, 50f));
-        status.color = new Color(1f, 0.8f, 0.5f);
+        MainMenuSceneBuilder.Place(status.rectTransform, new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0f, 70f), new Vector2(420f, 50f));
+        status.color = MainMenuSceneBuilder.InkAccent;
 
         ConfirmDialog confirm = MainMenuSceneBuilder.BuildConfirmDialog(root.transform, font);
 

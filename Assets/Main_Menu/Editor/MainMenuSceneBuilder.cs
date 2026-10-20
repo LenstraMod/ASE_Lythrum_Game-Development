@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using TMPro;
 using UnityEditor;
 using UnityEditor.Events;
 using UnityEditor.SceneManagement;
+using UnityEditor.U2D.Sprites;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.UI;
@@ -22,10 +24,12 @@ public static class MainMenuSceneBuilder
     // Scene pertama saat New Game. Harus berisi Player dengan PlayerHealth agar save & pause berfungsi.
     const string NewGameScenePath = "Assets/Scenes/SettingInput.unity";
     const string LayerFolder = Root + "/Assets_MainMenu/Layers";
-    const string FontPath = Root + "/Fonts/Tahoma.ttf";
-    const string FontAssetPath = Root + "/Fonts/Tahoma SDF.asset";
-    const string ShadowMaterialPath = Root + "/Fonts/Tahoma SDF - Shadow.mat";
+    const string FontPath = Root + "/Fonts/Cinzel.ttf";
+    const string FontAssetPath = Root + "/Fonts/Cinzel SDF.asset";
+    const string ShadowMaterialPath = Root + "/Fonts/Cinzel SDF - Shadow.mat";
     const string UnlitMaterialPath = "Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Unlit-Default.mat";
+    const string PaperSheetPath = Root + "/Assets_MainMenu/Paper_UI_SpriteSheet.png";
+    const string PaperSlicesPath = Root + "/Assets_MainMenu/Paper_UI_SpriteSheet.slices.json";
     const float PixelsPerUnit = 100f;
     const int SkyTextureWidth = 64;
 
@@ -33,6 +37,25 @@ public static class MainMenuSceneBuilder
     static readonly Color TextColor = new Color(1f, 0.95f, 0.88f);
     static readonly Color HoverColor = new Color(1f, 0.8f, 0.5f);
     static readonly Color PanelColor = new Color(0.16f, 0.06f, 0.12f, 0.85f);
+    // Warna tinta untuk teks di atas panel kertas.
+    internal static readonly Color InkColor = new Color(0.30f, 0.19f, 0.13f);
+    internal static readonly Color InkAccent = new Color(0.66f, 0.25f, 0.15f);
+
+    [Serializable]
+    class PaperSheetMeta
+    {
+        public int width;
+        public int height;
+        public PaperSpriteMeta[] sprites;
+    }
+
+    [Serializable]
+    class PaperSpriteMeta
+    {
+        public string name;
+        public int[] rect;     // x, y, w, h (origin kiri-atas)
+        public int[] border;   // L, B, R, T
+    }
 
     [Serializable]
     class LayerMeta
@@ -62,6 +85,7 @@ public static class MainMenuSceneBuilder
 
         LayerMeta meta = JsonUtility.FromJson<LayerMeta>(File.ReadAllText(LayerFolder + "/layers.json"));
         ConfigureLayerImports(meta);
+        ConfigurePaperSheet();
         TMP_FontAsset font = GetOrCreateFontAsset();
         Material shadow = GetOrCreateShadowMaterial(font);
 
@@ -104,6 +128,94 @@ public static class MainMenuSceneBuilder
         }
     }
 
+    // Potong Paper_UI_SpriteSheet menjadi sprite bernama (hasil Tools~/slice_paper_ui.py), lengkap dengan border 9-slice.
+    internal static void ConfigurePaperSheet()
+    {
+        var importer = (TextureImporter)AssetImporter.GetAtPath(PaperSheetPath);
+        importer.textureType = TextureImporterType.Sprite;
+        importer.spriteImportMode = SpriteImportMode.Multiple;
+        importer.spritePixelsPerUnit = PixelsPerUnit;
+        importer.mipmapEnabled = false;
+        importer.alphaIsTransparency = true;
+        importer.wrapMode = TextureWrapMode.Clamp;
+        importer.filterMode = FilterMode.Bilinear;
+        importer.maxTextureSize = 8192;   // sheet 4560 px; 4096 akan memperkecil dan membuat sprite buram
+        importer.textureCompression = TextureImporterCompression.CompressedHQ;
+        importer.SaveAndReimport();
+
+        var sheet = JsonUtility.FromJson<PaperSheetMeta>(File.ReadAllText(PaperSlicesPath));
+        var factory = new SpriteDataProviderFactories();
+        factory.Init();
+        ISpriteEditorDataProvider provider = factory.GetSpriteEditorDataProviderFromObject(importer);
+        provider.InitSpriteEditorDataProvider();
+
+        // Pertahankan ID sprite lama berdasarkan nama supaya referensi di scene/prefab tidak putus saat dipotong ulang.
+        var existingIds = provider.GetSpriteRects()
+            .GroupBy(r => r.name)
+            .ToDictionary(g => g.Key, g => g.First().spriteID);
+
+        var rects = sheet.sprites.Select(s => new SpriteRect
+        {
+            name = s.name,
+            rect = new Rect(s.rect[0], sheet.height - s.rect[1] - s.rect[3], s.rect[2], s.rect[3]),
+            border = new Vector4(s.border[0], s.border[1], s.border[2], s.border[3]),
+            alignment = SpriteAlignment.Center,
+            pivot = new Vector2(0.5f, 0.5f),
+            spriteID = existingIds.TryGetValue(s.name, out GUID id) ? id : GUID.Generate(),
+        }).ToArray();
+
+        provider.SetSpriteRects(rects);
+        provider.GetDataProvider<ISpriteNameFileIdDataProvider>()
+            .SetNameFileIdPairs(rects.Select(r => new SpriteNameFileIdPair(r.name, r.spriteID)));
+        provider.Apply();
+        importer.SaveAndReimport();
+    }
+
+    internal static Sprite PaperSprite(string name)
+    {
+        return AssetDatabase.LoadAllAssetsAtPath(PaperSheetPath).OfType<Sprite>().First(s => s.name == name);
+    }
+
+    // Panel kertas (9-slice) dengan pita banner berisi judul di tepi atasnya.
+    internal static RectTransform CreatePaperPanel(Transform parent, string name, Vector2 size, string title, TMP_FontAsset font)
+    {
+        var center = new Vector2(0.5f, 0.5f);
+        var rect = CreateRect(parent, name);
+        Place(rect, center, center, Vector2.zero, size);
+        var paper = rect.gameObject.AddComponent<Image>();
+        paper.sprite = PaperSprite("Paper_Large");
+        paper.type = Image.Type.Sliced;
+
+        var top = new Vector2(0.5f, 1f);
+        var banner = CreateRect(rect, "Banner");
+        Place(banner, top, top, new Vector2(0f, 50f), new Vector2(480f, 120f));
+        var bannerImage = banner.gameObject.AddComponent<Image>();
+        bannerImage.sprite = PaperSprite("Banner_Arc");
+        bannerImage.preserveAspect = true;
+        bannerImage.raycastTarget = false;
+
+        // Teks diletakkan di bagian pita yang melengkung (sekitar seperempat atas gambar banner).
+        var header = CreateText(banner, "Header", title, font, null, 40f, TextAlignmentOptions.Center);
+        Place(header.rectTransform, Vector2.zero, Vector2.one, new Vector2(0f, 29f), new Vector2(-140f, -64f));
+        header.color = InkColor;
+        // Radius busur teks; lebih kecil dari lengkung pita (~550) supaya lekukannya lebih terasa.
+        SetField(header.gameObject.AddComponent<ArcText>(), "radius", 380f);
+        return rect;
+    }
+
+    // Tombol teks bergaya tinta untuk dipakai di atas kertas.
+    internal static void ApplyInkStyle(Button button)
+    {
+        button.GetComponent<TMP_Text>().color = Color.white;
+        var colors = button.colors;
+        colors.normalColor = InkColor;
+        colors.highlightedColor = InkAccent;
+        colors.selectedColor = InkAccent;
+        colors.pressedColor = InkAccent * 0.75f;
+        colors.disabledColor = new Color(InkColor.r, InkColor.g, InkColor.b, 0.4f);
+        button.colors = colors;
+    }
+
     internal static TMP_FontAsset GetOrCreateFontAsset()
     {
         var asset = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>(FontAssetPath);
@@ -111,11 +223,11 @@ public static class MainMenuSceneBuilder
         {
             var font = AssetDatabase.LoadAssetAtPath<Font>(FontPath);
             asset = TMP_FontAsset.CreateFontAsset(font, 90, 9, GlyphRenderMode.SDFAA, 1024, 1024, AtlasPopulationMode.Dynamic);
-            asset.name = "Tahoma SDF";
+            asset.name = "Cinzel SDF";
             AssetDatabase.CreateAsset(asset, FontAssetPath);
 
-            asset.atlasTextures[0].name = "Tahoma SDF Atlas";
-            asset.material.name = "Tahoma SDF Material";
+            asset.atlasTextures[0].name = "Cinzel SDF Atlas";
+            asset.material.name = "Cinzel SDF Material";
             AssetDatabase.AddObjectToAsset(asset.atlasTextures[0], asset);
             AssetDatabase.AddObjectToAsset(asset.material, asset);
         }
@@ -418,49 +530,48 @@ public static class MainMenuSceneBuilder
             checkmark = AssetDatabase.GetBuiltinExtraResource<Sprite>("UI/Skin/Checkmark.psd"),
         };
 
-        var center = new Vector2(0.5f, 0.5f);
         var top = new Vector2(0.5f, 1f);
-        var panelRect = CreateRect(canvas, "SettingsPanel");
-        Place(panelRect, center, center, Vector2.zero, new Vector2(760f, 480f));
-        var background = panelRect.gameObject.AddComponent<Image>();
-        background.sprite = resources.standard;
-        background.type = Image.Type.Sliced;
-        background.color = PanelColor;
-
-        var header = CreateText(panelRect, "Header", "Settings", font, null, 64f, TextAlignmentOptions.Center);
-        Place(header.rectTransform, top, top, new Vector2(0f, -40f), new Vector2(600f, 90f));
+        RectTransform panelRect = CreatePaperPanel(canvas, "SettingsPanel", new Vector2(780f, 500f), "Settings", font);
 
         // Baris volume
         var volumeLabel = CreateText(panelRect, "VolumeLabel", "Volume", font, null, 38f, TextAlignmentOptions.Left);
-        Place(volumeLabel.rectTransform, top, top, new Vector2(-190f, -170f), new Vector2(260f, 60f));
+        Place(volumeLabel.rectTransform, top, top, new Vector2(-190f, -160f), new Vector2(260f, 60f));
+        volumeLabel.color = InkColor;
 
         var slider = DefaultControls.CreateSlider(resources).GetComponent<Slider>();
         slider.name = "VolumeSlider";
         slider.transform.SetParent(panelRect, false);
-        Place((RectTransform)slider.transform, top, top, new Vector2(110f, -170f), new Vector2(300f, 24f));
+        Place((RectTransform)slider.transform, top, top, new Vector2(70f, -160f), new Vector2(280f, 24f));
         slider.minValue = 0f;
         slider.maxValue = 1f;
         slider.value = 1f;
-        slider.fillRect.GetComponent<Image>().color = HoverColor;
+        slider.transform.Find("Background").GetComponent<Image>().color = new Color(InkColor.r, InkColor.g, InkColor.b, 0.25f);
+        slider.fillRect.GetComponent<Image>().color = InkAccent;
+        slider.handleRect.GetComponent<Image>().color = InkColor;
 
         var volumeValue = CreateText(panelRect, "VolumeValue", "100%", font, null, 34f, TextAlignmentOptions.Right);
-        Place(volumeValue.rectTransform, top, top, new Vector2(320f, -170f), new Vector2(110f, 60f));
+        Place(volumeValue.rectTransform, top, top, new Vector2(265f, -160f), new Vector2(100f, 60f));
+        volumeValue.color = InkColor;
 
         // Baris fullscreen
         var fullscreenLabel = CreateText(panelRect, "FullscreenLabel", "Fullscreen", font, null, 38f, TextAlignmentOptions.Left);
-        Place(fullscreenLabel.rectTransform, top, top, new Vector2(-190f, -260f), new Vector2(260f, 60f));
+        Place(fullscreenLabel.rectTransform, top, top, new Vector2(-190f, -250f), new Vector2(260f, 60f));
+        fullscreenLabel.color = InkColor;
 
         var toggle = DefaultControls.CreateToggle(resources).GetComponent<Toggle>();
         toggle.name = "FullscreenToggle";
         toggle.transform.SetParent(panelRect, false);
         Object.DestroyImmediate(toggle.transform.Find("Label").gameObject);   // label legacy diganti TMP di atas
-        Place((RectTransform)toggle.transform, top, top, new Vector2(-25f, -260f), new Vector2(40f, 40f));
+        Place((RectTransform)toggle.transform, top, top, new Vector2(-35f, -250f), new Vector2(40f, 40f));
         var toggleBackground = (RectTransform)toggle.transform.Find("Background");
         Place(toggleBackground, Vector2.zero, Vector2.one, Vector2.zero, Vector2.zero);
+        toggleBackground.GetComponent<Image>().color = new Color(InkColor.r, InkColor.g, InkColor.b, 0.25f);
+        toggle.graphic.color = InkColor;
 
         back = CreateButton(panelRect, "BackButton", "Back", font, null, 0);
-        Place((RectTransform)back.transform, new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0f, 40f), new Vector2(300f, 70f));
+        Place((RectTransform)back.transform, new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0f, 75f), new Vector2(300f, 64f));
         back.GetComponent<TMP_Text>().alignment = TextAlignmentOptions.Center;
+        ApplyInkStyle(back);
 
         var panel = panelRect.gameObject.AddComponent<SettingsPanel>();
         SetField(panel, "volumeSlider", slider);
