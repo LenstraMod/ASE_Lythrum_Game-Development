@@ -10,6 +10,7 @@ public class PressurePlate : MonoBehaviour {
         if (other.CompareTag("Player")) 
         {
             objectsOnPlate++;
+            AudioManager.Play(Sfx.PlatePress);
             targetDoor.Open();
         }
     }
@@ -19,6 +20,7 @@ public class PressurePlate : MonoBehaviour {
         if (other.CompareTag("Player")) 
         {
             objectsOnPlate--;
+            AudioManager.Play(Sfx.PlateRelease);
         }
     }
 

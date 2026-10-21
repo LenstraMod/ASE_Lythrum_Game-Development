@@ -1,0 +1,4 @@
+"16x16 Pixel Forest Tileset - top-down RPG style" (free sample) by inkBubi
+https://opengameart.org/content/free-sample-16x16-pixel-forest-tileset-%E2%80%93-top-down-rpg-style
+License: CC0 (public domain). Downloaded 2026-10-03. Only trees, bushes, stones and the water/grass autotile are used,
+recoloured by Tools/MapGen/pack_meadow.py to match the town tileset.

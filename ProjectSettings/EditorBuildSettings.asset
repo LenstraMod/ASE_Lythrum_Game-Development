@@ -8,5 +8,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Maps/Desert.unity
+    guid: 2ef03fd65a4f7d641b8b249b98aa9054
+  - enabled: 1
+    path: Assets/Scenes/Maps/City.unity
+    guid: 1cc7e72df9d7d1b49b8c10bccde94249
+  - enabled: 1
+    path: Assets/Scenes/Maps/Dungeon.unity
+    guid: ec6619ae5f71ca84188c9702f9a75d79
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

@@ -34,6 +34,7 @@ public class TimeStopAbility : MonoBehaviour
 
     private Animator animator;
     private SpriteRenderer playerSprite;
+    private PlayerMovement movement;
     private bool hasTrigger;
     private float readyTime;
 
@@ -44,6 +45,7 @@ public class TimeStopAbility : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         playerSprite = GetComponent<SpriteRenderer>();
+        movement = GetComponent<PlayerMovement>();
         hasTrigger = animator.HasParameter(timeStopTrigger);
 
         if (greyscaleScreen) CreateVolume();
@@ -77,7 +79,8 @@ public class TimeStopAbility : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(key) && !IsActive && Time.time >= readyTime)
+        bool locked = movement != null && movement.controlLocked;      // no abilities while a cutscene or the boss grab holds the player
+        if (Input.GetKeyDown(key) && !IsActive && Time.time >= readyTime && !locked)
         {
             StartCoroutine(TimeStopRoutine());
         }
@@ -89,6 +92,7 @@ public class TimeStopAbility : MonoBehaviour
         if (hasTrigger) animator.SetTrigger(timeStopTrigger);
 
         TimeStopManager.SetTimeStopped(true);
+        AudioManager.Play(Sfx.TimeStopStart);
         if (showPlaceholderVfx) SpawnRing(0.3f, 9f);
 
         TimeRemaining = duration;
@@ -103,6 +107,7 @@ public class TimeStopAbility : MonoBehaviour
         TimeRemaining = 0f;
 
         TimeStopManager.SetTimeStopped(false);
+        AudioManager.Play(Sfx.TimeStopEnd);
         if (showPlaceholderVfx) SpawnRing(9f, 0.3f);
 
         fade = 0f;
