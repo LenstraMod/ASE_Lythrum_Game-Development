@@ -11,6 +11,7 @@ public class Checkpoint : MonoBehaviour
         {
             playerHealth.UpdateCheckpoint(transform.position);
             Debug.Log("Respawn Set");
+            playerHealth.Heal(playerHealth.maxHealth);
         }
     }
 
