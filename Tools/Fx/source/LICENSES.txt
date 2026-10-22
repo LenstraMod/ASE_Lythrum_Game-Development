@@ -1,0 +1,3 @@
+slash_tbbk.png  - "Pixel art sword slash effect" by tbbk, CC0  https://opengameart.org/content/pixel-art-sword-slash-effect  (3x3 frames of 64x47)
+fire_kertex.png - "Fire/Flame" by KerteX_, CC0                https://opengameart.org/content/fireflame  (3x2 frames, drawn at ~7x pixel size; pack_combat_fx.py scales it down to native pixels)
+Downloaded 2026-10-03. Credits are optional for both.

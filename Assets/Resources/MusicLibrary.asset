@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8769e8a9323f1db4c9302c30149a87be, type: 3}
+  m_Name: MusicLibrary
+  m_EditorClassIdentifier: Assembly-CSharp::MusicLibrary
+  scenes:
+  - sceneName: Desert
+    layers:
+    - clip: {fileID: 8300000, guid: cd4234d399e966846ba8410364479556, type: 3}
+      volume: 0.5
+    fadeSeconds: 2
+  - sceneName: City
+    layers:
+    - clip: {fileID: 8300000, guid: 94e859ff76aab0f42b9eeb915750f6c6, type: 3}
+      volume: 0.45
+    fadeSeconds: 2
+  - sceneName: BossFight
+    layers:
+    - clip: {fileID: 8300000, guid: 2413bc8f7a5675d4b863d22a5268e482, type: 3}
+      volume: 0.7
+    fadeSeconds: 1.5
+  - sceneName: Dungeon
+    layers:
+    - clip: {fileID: 8300000, guid: b0843f7f9a7c86e47a4d3215db858c58, type: 3}
+      volume: 0.55
+    - clip: {fileID: 8300000, guid: aabf7c756bfbb4748bd779446094bfa8, type: 3}
+      volume: 0.6
+    fadeSeconds: 3

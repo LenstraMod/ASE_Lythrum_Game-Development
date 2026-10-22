@@ -1,9 +1,15 @@
 using UnityEngine;
 
+// Player hit points (a continuous amount, so attacks can take a fraction of the bar), damage with short invincibility,
+// respawn at the last checkpoint.
+// Cutscenes can block damage (cutsceneInvulnerable); the Respawned event lets the boss arena reset.
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHealth = 3;
-    private int currentHealth;
+    public float maxHealth = 3f;
+    private float currentHealth;
+
+    public float CurrentHealth => currentHealth;
+    public float MaxHealth => maxHealth;
     
     private Vector3 respawnPoint;
 
@@ -18,27 +24,34 @@ public class PlayerHealth : MonoBehaviour
         respawnPoint = transform.position; 
     }
 
-    public void TakeDamage(int damage)
+    // respectHitCooldown = false lets very rapid hits (the boss's Fear slams) all land instead of being blocked
+    // by the short invincibility after each hit. Cutscenes (and isInvincible) still block them.
+    public void TakeDamage(float damage, bool respectHitCooldown = true)
     {
 
-        if (isInvincible) 
+        if (isInvincible || cutsceneInvulnerable || (respectHitCooldown && Time.time < invincibleUntil))
         {
-            Debug.Log("Damage dodged!");
             return; 
         }
         
+        if (respectHitCooldown) invincibleUntil = Time.time + hitInvincibleTime;
         currentHealth -= damage;
-        Debug.Log("Player took damage! Current Health: " + currentHealth);
 
         if (currentHealth <= 0)
         {
             Die();
+        }
+        else
+        {
+            AudioManager.Play(Sfx.PlayerHurt);
+            HitFlash();
         }
     }
 
     private void Die()
     {
         Debug.Log("Player Died!");
+        AudioManager.Play(Sfx.PlayerDeath);
         Respawn();
     }
 
@@ -46,6 +59,7 @@ public class PlayerHealth : MonoBehaviour
     {
         transform.position = respawnPoint;
         currentHealth = maxHealth;
+        Respawned?.Invoke();
     }
 
     public void UpdateCheckpoint(Vector3 newCheckpointPosition)
