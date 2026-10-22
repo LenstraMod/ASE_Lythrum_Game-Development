@@ -12,6 +12,7 @@ public class Checkpoint : MonoBehaviour
             playerHealth.UpdateCheckpoint(transform.position);
             AudioManager.Play(Sfx.Checkpoint);
             Debug.Log("Respawn Set");
+            GameSession.EnsureInstance().SaveGame();
         }
     }
 
