@@ -31884,7 +31884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   moveSpeed: 5
   runKey: 304
-  runSpeedMultiplier: 2
+  runSpeedMultiplier: 1.6
   runAnimationSpeed: 1.3
   footstepInterval: 0.35
   rb: {fileID: 0}
@@ -71775,6 +71775,14 @@ PrefabInstance:
     - target: {fileID: 6494414155244261651, guid: 52ddcc152471e5544b1afe13078170cc, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7776735739489356366, guid: 52ddcc152471e5544b1afe13078170cc, type: 3}
+      propertyPath: slamDamage
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7776735739489356366, guid: 52ddcc152471e5544b1afe13078170cc, type: 3}
+      propertyPath: fearSlamDamage
+      value: 0.15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
