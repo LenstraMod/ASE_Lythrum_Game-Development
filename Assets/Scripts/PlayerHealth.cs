@@ -79,7 +79,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    public void Heal(int heal)
+    public void Heal(float heal)
     {
         if (currentHealth + heal > maxHealth) {
             currentHealth = maxHealth;

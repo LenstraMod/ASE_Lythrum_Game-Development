@@ -12,7 +12,7 @@ public class DoorController : MonoBehaviour {
     public Key requiredKey;      // The slot to drag your Key object into
 
     private Vector3Int cellPosition;
-    private bool isOpen = false;
+    public bool isOpen = false;
 
     private void Start() {
         cellPosition = tilemap.WorldToCell(transform.position);
@@ -40,9 +40,6 @@ public class DoorController : MonoBehaviour {
             }
         }
     }
-
-    // Open()/Close() can be called every frame (PressurePlate does), so only play the sound when the state changes.
-    private bool isOpen;
 
     public void Open() {
         isOpen = true;

@@ -44,12 +44,14 @@ public class PressurePlate : MonoBehaviour {
         // Check if the object has an allowed tag AND is a solid object (not another trigger)
         if (!other.isTrigger && IsAllowedToPress(other.tag)) 
         {
+            Debug.Log("Touched by: " + other.gameObject.name + " | Tag: " + other.tag + " | isTrigger: " + other.isTrigger);
             objectsOnPlate++;
             
-            if (objectsOnPlate == 1) 
+            if (objectsOnPlate >= 1) 
             {
                 // 1. Change the pressure plate tile to look "pressed"
                 tilemap.SetTile(cellPosition, pressedTile);
+                AudioManager.Play(Sfx.PlatePress);
 
                 // 2. Open all connected doors
                 foreach (DoorController door in targetDoors)
@@ -72,7 +74,8 @@ public class PressurePlate : MonoBehaviour {
                 
                 // 1. Change the pressure plate tile back to "unpressed"
                 tilemap.SetTile(cellPosition, unpressedTile);
-
+                AudioManager.Play(Sfx.PlateRelease);
+                
                 // 2. Close all connected doors
                 foreach (DoorController door in targetDoors)
                 {
