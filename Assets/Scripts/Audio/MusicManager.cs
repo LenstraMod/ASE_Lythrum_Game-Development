@@ -10,8 +10,10 @@ public class MusicManager : MonoBehaviour
 {
     const string LibraryResourceName = "MusicLibrary";
 
-    // 0-1, multiplies all music. Hook an options slider to this later.
+    // 0-1, set by the "Music" and "Ambience" sliders (GameSettings). A layer marked as ambience in the
+    // MusicLibrary uses AmbienceVolume, every other layer uses MasterVolume.
     public static float MasterVolume = 1f;
+    public static float AmbienceVolume = 1f;
 
     [Range(0f, 1f)] public float timeStopVolume = 0.35f;
 
@@ -22,6 +24,7 @@ public class MusicManager : MonoBehaviour
         public float target;      // volume this layer is fading towards (0 = fading out)
         public float level;       // current layer volume before master / ducking
         public float fadeSeconds;
+        public bool ambience;
     }
 
     static MusicManager instance;
@@ -111,6 +114,7 @@ public class MusicManager : MonoBehaviour
                     voices.Add(voice);
                 }
                 voice.target = layer.volume;
+                voice.ambience = layer.ambience;
                 kept.Add(voice);
             }
         }
@@ -144,7 +148,7 @@ public class MusicManager : MonoBehaviour
         {
             Voice voice = voices[i];
             voice.level = Mathf.MoveTowards(voice.level, voice.target, dt / voice.fadeSeconds);
-            voice.source.volume = voice.level * MasterVolume * duck;
+            voice.source.volume = voice.level * (voice.ambience ? AmbienceVolume : MasterVolume) * duck;
 
             if (voice.target <= 0f && voice.level <= 0f)
             {

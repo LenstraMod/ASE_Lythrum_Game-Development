@@ -7,7 +7,7 @@ public class SaveData
 {
     public string sceneName;
     public Vector3 checkpoint;
-    public int health;
+    public float health;
     public float playTime;
     public long savedAtTicks;
 

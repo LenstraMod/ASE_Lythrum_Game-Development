@@ -32,10 +32,10 @@ public static class PauseMenuBuilder
         panel.gameObject.AddComponent<Image>().color = new Color(0f, 0f, 0f, 0.55f);
 
         MainMenuSceneBuilder.ConfigurePaperSheet();
-        RectTransform box = MainMenuSceneBuilder.CreatePaperPanel(panel, "Box", new Vector2(600f, 580f), "Paused", font);
+        RectTransform box = MainMenuSceneBuilder.CreatePaperPanel(panel, "Box", new Vector2(600f, 650f), "Paused", font);
         var top = new Vector2(0.5f, 1f);
 
-        string[] labels = { "Resume", "Save Game", "Main Menu", "Quit" };
+        string[] labels = { "Resume", "Save Game", "Settings", "Main Menu", "Quit" };
         var buttons = new Button[labels.Length];
         for (int i = 0; i < labels.Length; i++)
         {
@@ -49,18 +49,26 @@ public static class PauseMenuBuilder
         MainMenuSceneBuilder.Place(status.rectTransform, new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0f, 70f), new Vector2(420f, 50f));
         status.color = MainMenuSceneBuilder.InkAccent;
 
+        // Panel Settings sama dengan menu utama; menggantikan kotak pause selama dibuka (latar gelap tetap).
+        SettingsPanel settings = MainMenuSceneBuilder.BuildSettingsPanel(panel, font, out Button settingsBack);
+
         ConfirmDialog confirm = MainMenuSceneBuilder.BuildConfirmDialog(root.transform, font);
 
         var pause = root.AddComponent<PauseMenu>();
         MainMenuSceneBuilder.SetField(pause, "panel", panel.gameObject);
+        MainMenuSceneBuilder.SetField(pause, "menuBox", box.gameObject);
         MainMenuSceneBuilder.SetField(pause, "statusText", status);
         MainMenuSceneBuilder.SetField(pause, "confirmDialog", confirm);
+        MainMenuSceneBuilder.SetField(pause, "settingsPanel", settings);
         MainMenuSceneBuilder.SetField(pause, "firstSelected", buttons[0].gameObject);
+        MainMenuSceneBuilder.SetField(pause, "settingsButton", buttons[2].gameObject);
 
         UnityEventTools.AddPersistentListener(buttons[0].onClick, pause.Resume);
         UnityEventTools.AddPersistentListener(buttons[1].onClick, pause.SaveGame);
-        UnityEventTools.AddPersistentListener(buttons[2].onClick, pause.ReturnToMainMenu);
-        UnityEventTools.AddPersistentListener(buttons[3].onClick, pause.Quit);
+        UnityEventTools.AddPersistentListener(buttons[2].onClick, pause.OpenSettings);
+        UnityEventTools.AddPersistentListener(buttons[3].onClick, pause.ReturnToMainMenu);
+        UnityEventTools.AddPersistentListener(buttons[4].onClick, pause.Quit);
+        UnityEventTools.AddPersistentListener(settingsBack.onClick, pause.CloseSettings);
 
         panel.gameObject.SetActive(false);
         PrefabUtility.SaveAsPrefabAsset(root, PrefabPath);

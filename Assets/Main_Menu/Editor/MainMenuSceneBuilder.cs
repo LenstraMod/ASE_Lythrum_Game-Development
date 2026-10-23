@@ -63,15 +63,80 @@ public static class MainMenuSceneBuilder
         public int width;
         public int height;
         public int[] sky;
-        public CloudMeta[] clouds;
     }
 
-    [Serializable]
-    class CloudMeta
+    // Satu awan di dalam lapis kedalaman. Posisi dalam unit lokal art (origin tengah, Y ke atas).
+    struct CloudPlacement
+    {
+        public string sprite;
+        public Vector2 position;
+        public float scale;
+        public bool flip;
+
+        public CloudPlacement(string sprite, float x, float y, float scale, bool flip = false)
+        {
+            this.sprite = sprite;
+            position = new Vector2(x, y);
+            this.scale = scale;
+            this.flip = flip;
+        }
+    }
+
+    // Lapis awan: makin dekat makin besar, makin cepat bergulir, dan makin kuat bergeser mengikuti mouse.
+    class CloudDepth
     {
         public string name;
-        public int[] rect;
+        public int order;
+        public float alpha;
+        public float speed;
+        public Vector2 mouseStrength;
+        public Vector2 driftAmplitude;
+        public float phase;
+        public CloudPlacement[] clouds;
     }
+
+    // Awan disebar dari langit atas sampai dekat cakrawala di tengah layar (y = 0 adalah tengah layar, tepi atas art = 10.8).
+    // Cloud_02/05 terpotong di bagian atas sumbernya, jadi tepi atasnya ditempel ke tepi atas art.
+    // Cloud_01/06 terpotong di sisi kiri/kanan dan potongannya terlihat saat bergulir, jadi tidak dipakai.
+    static readonly CloudDepth[] CloudDepths =
+    {
+        new CloudDepth
+        {
+            name = "Clouds_Far", order = 10, alpha = 0.6f, speed = 0.12f,
+            mouseStrength = new Vector2(0.05f, 0.02f), driftAmplitude = new Vector2(0.03f, 0.015f), phase = 1.4f,
+            clouds = new[]
+            {
+                new CloudPlacement("L1_Cloud_07", -15f, 1.6f, 0.5f, true),
+                new CloudPlacement("L1_Cloud_03", -10f, 0.2f, 0.8f, true),
+                new CloudPlacement("L1_Cloud_04", -3f, 0.8f, 0.45f),
+                new CloudPlacement("L1_Cloud_03", 4f, 2.2f, 1f),
+                new CloudPlacement("L1_Cloud_07", 9f, 1.2f, 0.55f),
+                new CloudPlacement("L1_Cloud_04", 17f, 0.4f, 0.45f, true),
+            },
+        },
+        new CloudDepth
+        {
+            name = "Clouds_Mid", order = 11, alpha = 0.85f, speed = 0.25f,
+            mouseStrength = new Vector2(0.11f, 0.05f), driftAmplitude = new Vector2(0.05f, 0.025f), phase = 2.1f,
+            clouds = new[]
+            {
+                new CloudPlacement("L1_Cloud_04", -14f, 5.8f, 0.9f),
+                new CloudPlacement("L1_Cloud_07", -6f, 3.4f, 0.75f),
+                new CloudPlacement("L1_Cloud_07", 0f, 6.4f, 1f, true),
+                new CloudPlacement("L1_Cloud_04", 13f, 4.6f, 0.8f, true),
+            },
+        },
+        new CloudDepth
+        {
+            name = "Clouds_Near", order = 12, alpha = 1f, speed = 0.4f,
+            mouseStrength = new Vector2(0.17f, 0.07f), driftAmplitude = new Vector2(0.07f, 0.035f), phase = 2.9f,
+            clouds = new[]
+            {
+                new CloudPlacement("L1_Cloud_02", -9f, 9.475f, 1f),
+                new CloudPlacement("L1_Cloud_05", 10f, 9.72f, 1f, true),
+            },
+        },
+    };
 
     [MenuItem("Lythrum/Build Main Menu")]
     public static void Build()
@@ -297,20 +362,35 @@ public static class MainMenuSceneBuilder
 
         var clouds = new GameObject("Clouds");
         clouds.transform.SetParent(root.transform, false);
-        AddParallax(clouds, new Vector2(0.12f, 0.05f), new Vector2(0.05f, 0.03f), 0.15f, 2.1f);
-        foreach (CloudMeta cloud in meta.clouds)
-        {
-            var sr = CreateSprite(clouds.transform, cloud.name, cloud.name, 10, material);
-            sr.transform.localPosition = RectCenter(meta, cloud.rect);
-        }
-        var scroller = clouds.AddComponent<CloudScroller>();
-        SetField(scroller, "artWidth", artSize.x);
+        foreach (CloudDepth depth in CloudDepths)
+            BuildCloudDepth(clouds.transform, depth, artSize.x, material);
 
         var ruins = CreateSprite(root.transform, "Ruins", "L2_Ruins", 20, material);
         AddParallax(ruins.gameObject, new Vector2(0.22f, 0.1f), new Vector2(0.08f, 0.04f), 0.2f, 0.7f);
 
         var foreground = CreateSprite(root.transform, "Foreground", "L3_Foreground", 30, material);
         AddParallax(foreground.gameObject, new Vector2(0.5f, 0.22f), new Vector2(0.14f, 0.06f), 0.22f, 0f);
+    }
+
+    static void BuildCloudDepth(Transform parent, CloudDepth depth, float artWidth, Material material)
+    {
+        var layer = new GameObject(depth.name);
+        layer.transform.SetParent(parent, false);
+        AddParallax(layer, depth.mouseStrength, depth.driftAmplitude, 0.15f, depth.phase);
+
+        for (int i = 0; i < depth.clouds.Length; i++)
+        {
+            CloudPlacement cloud = depth.clouds[i];
+            var sr = CreateSprite(layer.transform, cloud.sprite + "_" + i, cloud.sprite, depth.order, material);
+            sr.transform.localPosition = cloud.position;
+            sr.transform.localScale = new Vector3(cloud.scale, cloud.scale, 1f);
+            sr.flipX = cloud.flip;
+            sr.color = new Color(1f, 1f, 1f, depth.alpha);
+        }
+
+        var scroller = layer.AddComponent<CloudScroller>();
+        SetField(scroller, "speed", depth.speed);
+        SetField(scroller, "artWidth", artWidth);
     }
 
     static SpriteRenderer CreateSprite(Transform parent, string name, string spriteName, int order, Material material)
@@ -331,14 +411,6 @@ public static class MainMenuSceneBuilder
         SetField(layer, "driftAmplitude", driftAmplitude);
         SetField(layer, "driftSpeed", driftSpeed);
         SetField(layer, "phase", phase);
-    }
-
-    // Pusat rect piksel (origin kiri-atas) -> posisi lokal (origin tengah, Y ke atas).
-    static Vector3 RectCenter(LayerMeta meta, int[] rect)
-    {
-        float cx = (rect[0] + rect[2]) * 0.5f;
-        float cy = (rect[1] + rect[3]) * 0.5f;
-        return new Vector3((cx - meta.width * 0.5f) / PixelsPerUnit, (meta.height * 0.5f - cy) / PixelsPerUnit, 0f);
     }
 
     // ---------- UI ----------
@@ -520,7 +592,8 @@ public static class MainMenuSceneBuilder
         return rect;
     }
 
-    static SettingsPanel BuildSettingsPanel(Transform canvas, TMP_FontAsset font, out Button back)
+    // Panel Settings (volume per kanal, resolusi, fullscreen). Dipakai juga oleh PauseMenuBuilder.
+    internal static SettingsPanel BuildSettingsPanel(Transform canvas, TMP_FontAsset font, out Button back)
     {
         var resources = new DefaultControls.Resources
         {
@@ -530,55 +603,131 @@ public static class MainMenuSceneBuilder
             checkmark = AssetDatabase.GetBuiltinExtraResource<Sprite>("UI/Skin/Checkmark.psd"),
         };
 
-        var top = new Vector2(0.5f, 1f);
-        RectTransform panelRect = CreatePaperPanel(canvas, "SettingsPanel", new Vector2(780f, 500f), "Settings", font);
+        RectTransform panelRect = CreatePaperPanel(canvas, "SettingsPanel", new Vector2(860f, 700f), "Settings", font);
+        var panel = panelRect.gameObject.AddComponent<SettingsPanel>();
 
-        // Baris volume
-        var volumeLabel = CreateText(panelRect, "VolumeLabel", "Volume", font, null, 38f, TextAlignmentOptions.Left);
-        Place(volumeLabel.rectTransform, top, top, new Vector2(-190f, -160f), new Vector2(260f, 60f));
-        volumeLabel.color = InkColor;
+        // Baris volume, satu per kanal GameSettings.
+        var channels = (GameSettings.Channel[])Enum.GetValues(typeof(GameSettings.Channel));
+        var so = new SerializedObject(panel);
+        SerializedProperty rows = so.FindProperty("volumes");
+        rows.arraySize = channels.Length;
+        float y = -150f;
+        for (int i = 0; i < channels.Length; i++, y -= 72f)
+        {
+            string name = channels[i].ToString();
+            CreateSettingsLabel(panelRect, name, y, font);
+            Slider slider = CreateSettingsSlider(panelRect, name + "Slider", y, resources);
 
-        var slider = DefaultControls.CreateSlider(resources).GetComponent<Slider>();
-        slider.name = "VolumeSlider";
-        slider.transform.SetParent(panelRect, false);
-        Place((RectTransform)slider.transform, top, top, new Vector2(70f, -160f), new Vector2(280f, 24f));
-        slider.minValue = 0f;
-        slider.maxValue = 1f;
-        slider.value = 1f;
-        slider.transform.Find("Background").GetComponent<Image>().color = new Color(InkColor.r, InkColor.g, InkColor.b, 0.25f);
-        slider.fillRect.GetComponent<Image>().color = InkAccent;
-        slider.handleRect.GetComponent<Image>().color = InkColor;
+            var value = CreateText(panelRect, name + "Value", "100%", font, null, 32f, TextAlignmentOptions.Right);
+            Place(value.rectTransform, new Vector2(0.5f, 1f), new Vector2(0.5f, 1f), new Vector2(300f, y), new Vector2(100f, 60f));
+            value.color = InkColor;
 
-        var volumeValue = CreateText(panelRect, "VolumeValue", "100%", font, null, 34f, TextAlignmentOptions.Right);
-        Place(volumeValue.rectTransform, top, top, new Vector2(265f, -160f), new Vector2(100f, 60f));
-        volumeValue.color = InkColor;
+            SerializedProperty row = rows.GetArrayElementAtIndex(i);
+            row.FindPropertyRelative("channel").enumValueIndex = i;
+            row.FindPropertyRelative("slider").objectReferenceValue = slider;
+            row.FindPropertyRelative("value").objectReferenceValue = value;
+        }
+        so.ApplyModifiedPropertiesWithoutUndo();
 
-        // Baris fullscreen
-        var fullscreenLabel = CreateText(panelRect, "FullscreenLabel", "Fullscreen", font, null, 38f, TextAlignmentOptions.Left);
-        Place(fullscreenLabel.rectTransform, top, top, new Vector2(-190f, -250f), new Vector2(260f, 60f));
-        fullscreenLabel.color = InkColor;
+        CreateSettingsLabel(panelRect, "Resolution", y, font);
+        TMP_Dropdown dropdown = CreateSettingsDropdown(panelRect, y, font);
+        y -= 72f;
 
+        CreateSettingsLabel(panelRect, "Fullscreen", y, font);
         var toggle = DefaultControls.CreateToggle(resources).GetComponent<Toggle>();
         toggle.name = "FullscreenToggle";
         toggle.transform.SetParent(panelRect, false);
         Object.DestroyImmediate(toggle.transform.Find("Label").gameObject);   // label legacy diganti TMP di atas
-        Place((RectTransform)toggle.transform, top, top, new Vector2(-35f, -250f), new Vector2(40f, 40f));
+        Place((RectTransform)toggle.transform, new Vector2(0.5f, 1f), new Vector2(0.5f, 1f), new Vector2(-40f, y), new Vector2(40f, 40f));
         var toggleBackground = (RectTransform)toggle.transform.Find("Background");
         Place(toggleBackground, Vector2.zero, Vector2.one, Vector2.zero, Vector2.zero);
         toggleBackground.GetComponent<Image>().color = new Color(InkColor.r, InkColor.g, InkColor.b, 0.25f);
         toggle.graphic.color = InkColor;
 
         back = CreateButton(panelRect, "BackButton", "Back", font, null, 0);
-        Place((RectTransform)back.transform, new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0f, 75f), new Vector2(300f, 64f));
+        Place((RectTransform)back.transform, new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0f, 60f), new Vector2(300f, 64f));
         back.GetComponent<TMP_Text>().alignment = TextAlignmentOptions.Center;
         ApplyInkStyle(back);
 
-        var panel = panelRect.gameObject.AddComponent<SettingsPanel>();
-        SetField(panel, "volumeSlider", slider);
-        SetField(panel, "volumeValue", volumeValue);
+        SetField(panel, "resolutionDropdown", dropdown);
         SetField(panel, "fullscreenToggle", toggle);
         panelRect.gameObject.SetActive(false);
         return panel;
+    }
+
+    static void CreateSettingsLabel(Transform panel, string label, float y, TMP_FontAsset font)
+    {
+        var top = new Vector2(0.5f, 1f);
+        var text = CreateText(panel, label + "Label", label, font, null, 36f, TextAlignmentOptions.Left);
+        Place(text.rectTransform, top, top, new Vector2(-230f, y), new Vector2(300f, 60f));
+        text.color = InkColor;
+    }
+
+    static Slider CreateSettingsSlider(Transform panel, string name, float y, DefaultControls.Resources resources)
+    {
+        var top = new Vector2(0.5f, 1f);
+        var slider = DefaultControls.CreateSlider(resources).GetComponent<Slider>();
+        slider.name = name;
+        slider.transform.SetParent(panel, false);
+        Place((RectTransform)slider.transform, top, top, new Vector2(90f, y), new Vector2(300f, 24f));
+        slider.minValue = 0f;
+        slider.maxValue = 1f;
+        slider.value = 1f;
+        slider.transform.Find("Background").GetComponent<Image>().color = new Color(InkColor.r, InkColor.g, InkColor.b, 0.25f);
+        slider.fillRect.GetComponent<Image>().color = InkAccent;
+        slider.handleRect.GetComponent<Image>().color = InkColor;
+        return slider;
+    }
+
+    static TMP_Dropdown CreateSettingsDropdown(Transform panel, float y, TMP_FontAsset font)
+    {
+        const float itemHeight = 44f;
+        var resources = new TMP_DefaultControls.Resources
+        {
+            standard = AssetDatabase.GetBuiltinExtraResource<Sprite>("UI/Skin/UISprite.psd"),
+            background = AssetDatabase.GetBuiltinExtraResource<Sprite>("UI/Skin/Background.psd"),
+            knob = AssetDatabase.GetBuiltinExtraResource<Sprite>("UI/Skin/Knob.psd"),
+            checkmark = AssetDatabase.GetBuiltinExtraResource<Sprite>("UI/Skin/Checkmark.psd"),
+            dropdown = AssetDatabase.GetBuiltinExtraResource<Sprite>("UI/Skin/DropdownArrow.psd"),
+            mask = AssetDatabase.GetBuiltinExtraResource<Sprite>("UI/Skin/UIMask.psd"),
+        };
+
+        var top = new Vector2(0.5f, 1f);
+        var dropdown = TMP_DefaultControls.CreateDropdown(resources).GetComponent<TMP_Dropdown>();
+        dropdown.name = "ResolutionDropdown";
+        dropdown.transform.SetParent(panel, false);
+        Place((RectTransform)dropdown.transform, top, top, new Vector2(140f, y), new Vector2(400f, 52f));
+        dropdown.ClearOptions();
+
+        // Warna kertas & tinta, dan font yang sama dengan menu.
+        var paper = new Color(0.94f, 0.88f, 0.76f);
+        dropdown.GetComponent<Image>().color = new Color(InkColor.r, InkColor.g, InkColor.b, 0.15f);
+        dropdown.template.GetComponent<Image>().color = paper;
+        foreach (TMP_Text text in dropdown.GetComponentsInChildren<TMP_Text>(true))
+        {
+            text.font = font;
+            text.fontSize = 28f;
+            text.color = InkColor;
+            text.alignment = TextAlignmentOptions.Left;
+        }
+        dropdown.transform.Find("Arrow").GetComponent<Image>().color = InkColor;
+
+        // Baris pilihan lebih tinggi dari default (20 px) supaya teks 28 pt muat, tampil 5 baris sekaligus.
+        RectTransform item = (RectTransform)dropdown.template.Find("Viewport/Content/Item");
+        item.sizeDelta = new Vector2(item.sizeDelta.x, itemHeight);
+        var content = (RectTransform)item.parent;
+        content.sizeDelta = new Vector2(content.sizeDelta.x, itemHeight);
+        dropdown.template.sizeDelta = new Vector2(dropdown.template.sizeDelta.x, itemHeight * 5f);
+
+        var itemToggle = item.GetComponent<Toggle>();
+        var colors = itemToggle.colors;
+        colors.normalColor = paper;
+        colors.highlightedColor = new Color(InkAccent.r, InkAccent.g, InkAccent.b, 0.35f);
+        colors.selectedColor = colors.highlightedColor;
+        colors.pressedColor = new Color(InkAccent.r, InkAccent.g, InkAccent.b, 0.5f);
+        itemToggle.colors = colors;
+        itemToggle.graphic.color = InkColor;
+        return dropdown;
     }
 
     internal static Button CreateButton(Transform parent, string name, string label, TMP_FontAsset font, Material material, int index)
