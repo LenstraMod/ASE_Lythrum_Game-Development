@@ -1,0 +1,6 @@
+Background music (all CC0 / public domain, from OpenGameArt.org; credit is optional but appreciated)
+
+desert_loop.mp3          "Desert Loop" by iamoneabe            https://opengameart.org/content/desert-loop
+market_day_loop.mp3      "Medieval: Market Day" (loop version) by RandomMind   https://opengameart.org/content/medieval-market-day
+horror_atmosphere.ogg    "Post Apocalyptic Wastelands [Loop Ready]" (Horror Atmosphere) by Juhani Junkala / SubspaceAudio   https://opengameart.org/content/horror-atmosphere
+dungeon_ambience.ogg     "Loopable Dungeon Ambience" by JaggedStone   https://opengameart.org/content/loopable-dungeon-ambience

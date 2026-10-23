@@ -18,6 +18,7 @@
 .vs/
 .idea/
 .gradle/
+.claude/
 ExportedObj/
 *.csproj
 *.unityproj
@@ -48,3 +49,4 @@ Assets/Plugins/Editor/JetBrains*
 .Trashes
 ehthumbs.db
 Thumbs.db
+SETUP.md

@@ -41,13 +41,18 @@ public class DoorController : MonoBehaviour {
         }
     }
 
+    // Open()/Close() can be called every frame (PressurePlate does), so only play the sound when the state changes.
+    private bool isOpen;
+
     public void Open() {
         isOpen = true;
         tilemap.SetTile(cellPosition, openTile);
+        if (!isOpen) AudioManager.Play(Sfx.DoorOpen);
     }
 
     public void Close() {
         isOpen = false;
         tilemap.SetTile(cellPosition, closedTile);
+        if (isOpen) AudioManager.Play(Sfx.DoorClose);
     }
 }

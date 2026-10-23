@@ -7,11 +7,13 @@ public class Checkpoint : MonoBehaviour
 
     void Update()
     {
-        if (isPlayerNear && Input.GetKeyDown(KeyCode.F))
+        if (isPlayerNear && playerHealth != null && Input.GetKeyDown(KeyCode.F))
         {
             playerHealth.UpdateCheckpoint(transform.position);
+            AudioManager.Play(Sfx.Checkpoint);
             Debug.Log("Respawn Set");
             playerHealth.Heal(playerHealth.maxHealth);
+            GameSession.EnsureInstance().SaveGame();
         }
     }
 

@@ -13,6 +13,7 @@ public class Spike : MonoBehaviour
             if (player != null)
             {
                 player.TakeDamage(damageAmount);
+                AudioManager.Play(Sfx.SpikeHit);
             }
         }
     }

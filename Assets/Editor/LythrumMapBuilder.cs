@@ -5,6 +5,7 @@ using System.IO;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
@@ -62,8 +63,19 @@ public static class LythrumMapBuilder
         public readonly Dictionary<string, Color> tints = new Dictionary<string, Color>();
         public readonly List<KeyValuePair<string, string[][]>> layers = new List<KeyValuePair<string, string[][]>>();
 
+        // Scene extras (see Tools/MapGen/mapkit.py): darkness + lights, entry points and gates to other scenes.
+        public float[] globalLight;     // intensity, r, g, b
+        public float[] playerLight;     // outer radius, inner radius, intensity, r, g, b
+        public readonly List<float[]> lights = new List<float[]>();   // x, y, radius, intensity, r, g, b, flicker
+        public readonly List<KeyValuePair<string, float[]>> entries = new List<KeyValuePair<string, float[]>>();   // name -> x, y
+        public readonly List<string[]> portals = new List<string[]>();   // name, x, y, w, h, scene, entry
+        public readonly List<int[]> enemyZones = new List<int[]>();      // x0, y0, x1, y1 (tiles, inclusive)
+
         // Data rows go top -> bottom; the map is centred on the world origin.
         public Vector3Int Cell(int x, int y) => new Vector3Int(x - width / 2, height / 2 - 1 - y, 0);
+
+        // Centre of tile (x, y) in world units; fractions give positions between tiles.
+        public Vector3 TileCenter(float x, float y) => new Vector3(x - width / 2 + 0.5f, height / 2 - 1 - y + 0.5f, 0f);
     }
 
     [MenuItem("Lythrum/Build Maps/All Maps")]
@@ -82,6 +94,7 @@ public static class LythrumMapBuilder
     public static void BuildAllBatch()
     {
         EnsureDecorAboveGround();
+        LythrumPackTiles.EnsureTiles();
         foreach (var name in MapNames)
             BuildMap(name);
     }
@@ -92,6 +105,7 @@ public static class LythrumMapBuilder
             return;
 
         EnsureDecorAboveGround();
+        LythrumPackTiles.EnsureTiles();
         string last = null;
         foreach (var name in names)
             last = BuildMap(name);
@@ -130,16 +144,120 @@ public static class LythrumMapBuilder
         BakeCollision(map.name, tilemaps["Collision"]);
 
         PlaceSpawn(map, scene);
+        BuildExtras(map, scene);
 
         // Player can fight right away: combat scripts + a training dummy near the spawn.
         if (LythrumCombatSetup.ApplyToScene(scene))
             LythrumCombatSetup.AddDummyIfMissing(scene);
 
+        // Camera stays inside the map; Dungeon and Desert get their enemies.
+        LythrumWorldSetup.ApplyToScene(scene);
+
         Directory.CreateDirectory(SceneFolder);
         var path = SceneFolder + "/" + map.name + ".unity";
         EditorSceneManager.SaveScene(scene, path);
+        AddToBuildSettings(path);
         Debug.Log("[LythrumMapBuilder] Built " + path);
         return path;
+    }
+
+    // Lights, entry points and gates described in the map data.
+    static void BuildExtras(MapData map, Scene scene)
+    {
+        if (map.globalLight != null)
+        {
+            // Darkness: a very dim global light, everything else is lit by the point lights below.
+            var go = new GameObject("Global Light");
+            var light = go.AddComponent<Light2D>();
+            light.lightType = Light2D.LightType.Global;
+            light.intensity = map.globalLight[0];
+            light.color = new Color(map.globalLight[1], map.globalLight[2], map.globalLight[3]);
+        }
+
+        if (map.playerLight != null)
+        {
+            foreach (var root in scene.GetRootGameObjects())
+            {
+                if (root.name != "Player")
+                    continue;
+                var go = new GameObject("Player Light");
+                go.transform.SetParent(root.transform, false);
+                var light = AddPointLight(go, map.playerLight[0], map.playerLight[1], map.playerLight[2],
+                    new Color(map.playerLight[3], map.playerLight[4], map.playerLight[5]));
+                light.falloffIntensity = 0.6f;
+                var flicker = go.AddComponent<LightFlicker>();
+                flicker.strength = 0.05f;      // a faint, nervous wobble
+                flicker.speed = 3f;
+            }
+        }
+
+        int number = 0;
+        foreach (var l in map.lights)
+        {
+            var go = new GameObject("Light " + (++number));
+            go.transform.position = map.TileCenter(l[0], l[1]);
+            AddPointLight(go, l[2], Mathf.Min(0.6f, l[2] * 0.15f), l[3], new Color(l[4], l[5], l[6]));
+            if (l[7] > 0f)
+            {
+                var flicker = go.AddComponent<LightFlicker>();
+                flicker.strength = l[7];
+                flicker.dropouts = l[7] >= 0.3f;     // the unsettling ones
+            }
+        }
+
+        foreach (var entry in map.entries)
+        {
+            var go = new GameObject("Entry " + entry.Key);
+            go.transform.position = map.TileCenter(entry.Value[0], entry.Value[1]);
+            go.AddComponent<SceneEntryPoint>().entryName = entry.Key;
+        }
+
+        foreach (var z in map.enemyZones)
+        {
+            // tile rectangle (inclusive) -> world rectangle
+            var go = new GameObject("Enemy Zone");
+            go.transform.position = (map.TileCenter(z[0], z[1]) + map.TileCenter(z[2], z[3])) * 0.5f;
+            go.AddComponent<EnemyZone>().size = new Vector2(z[2] - z[0] + 1, z[3] - z[1] + 1);
+        }
+
+        foreach (var p in map.portals)
+        {
+            float x = F(p[1]), y = F(p[2]);
+            int w = int.Parse(p[3], CultureInfo.InvariantCulture), h = int.Parse(p[4], CultureInfo.InvariantCulture);
+            var go = new GameObject("Gate to " + p[5]);
+            // x, y = top-left tile of the trigger area; w, h in tiles
+            go.transform.position = map.TileCenter(x + (w - 1) / 2f, y + (h - 1) / 2f);
+            var box = go.AddComponent<BoxCollider2D>();
+            box.isTrigger = true;
+            box.size = new Vector2(w, h);
+            var transition = go.AddComponent<SceneTransition>();
+            transition.targetScene = p[5];
+            transition.entryName = p[6];
+        }
+    }
+
+    static Light2D AddPointLight(GameObject go, float outer, float inner, float intensity, Color color)
+    {
+        var light = go.AddComponent<Light2D>();
+        light.lightType = Light2D.LightType.Point;
+        light.pointLightOuterRadius = outer;
+        light.pointLightInnerRadius = Mathf.Min(inner, outer);
+        light.intensity = intensity;
+        light.color = color;
+        light.falloffIntensity = 0.5f;
+        light.shadowsEnabled = false;
+        return light;
+    }
+
+    // SceneManager.LoadScene only works for scenes listed in the build settings, and the gates between maps need that.
+    static void AddToBuildSettings(string scenePath)
+    {
+        var scenes = new List<EditorBuildSettingsScene>(EditorBuildSettings.scenes);
+        foreach (var s in scenes)
+            if (s.path == scenePath)
+                return;
+        scenes.Add(new EditorBuildSettingsScene(scenePath, true));
+        EditorBuildSettings.scenes = scenes.ToArray();
     }
 
     static void FillLayer(MapData map, Tilemap tilemap, string layerName, string[][] rows)
@@ -414,7 +532,7 @@ public static class LythrumMapBuilder
         if (TileCache.TryGetValue(token, out tile) && tile != null)
             return tile;
 
-        var format = token[0] == 'f' ? FloorTiles : token[0] == 'h' ? HouseTiles : null;
+        var format = token[0] == 'f' ? FloorTiles : token[0] == 'h' ? HouseTiles : LythrumPackTiles.TileFormat(token[0]);
         if (format == null)
             throw new FormatException("[LythrumMapBuilder] Bad tile token '" + token + "'");
 
@@ -425,6 +543,8 @@ public static class LythrumMapBuilder
         TileCache[token] = tile;
         return tile;
     }
+
+    static float F(string text) => float.Parse(text, CultureInfo.InvariantCulture);
 
     static MapData Load(string path)
     {
@@ -457,6 +577,24 @@ public static class LythrumMapBuilder
                 case "tint":
                     map.tints[parts[1]] = new Color(float.Parse(parts[2], inv), float.Parse(parts[3], inv),
                         float.Parse(parts[4], inv), float.Parse(parts[5], inv));
+                    break;
+                case "global_light":
+                    map.globalLight = new[] { F(parts[1]), F(parts[2]), F(parts[3]), F(parts[4]) };
+                    break;
+                case "player_light":
+                    map.playerLight = new[] { F(parts[1]), F(parts[2]), F(parts[3]), F(parts[4]), F(parts[5]), F(parts[6]) };
+                    break;
+                case "light":
+                    map.lights.Add(new[] { F(parts[1]), F(parts[2]), F(parts[3]), F(parts[4]), F(parts[5]), F(parts[6]), F(parts[7]), F(parts[8]) });
+                    break;
+                case "entry":
+                    map.entries.Add(new KeyValuePair<string, float[]>(parts[1], new[] { F(parts[2]), F(parts[3]) }));
+                    break;
+                case "enemy_zone":
+                    map.enemyZones.Add(new[] { int.Parse(parts[1], inv), int.Parse(parts[2], inv), int.Parse(parts[3], inv), int.Parse(parts[4], inv) });
+                    break;
+                case "portal":
+                    map.portals.Add(new[] { parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7] });
                     break;
                 case "layer":
                     var rows = new string[map.height][];

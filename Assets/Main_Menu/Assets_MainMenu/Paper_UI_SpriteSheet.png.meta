@@ -1,0 +1,6042 @@
+fileFormatVersion: 2
+guid: 2b81b9071e4cb2e4ab4c2b939dcac211
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -376296043494697072
+    second: Paper_UI_SpriteSheet_0
+  - first:
+      213: -4000114776825267993
+    second: Paper_UI_SpriteSheet_1
+  - first:
+      213: -5824551399861043812
+    second: Paper_UI_SpriteSheet_2
+  - first:
+      213: -6940561351411995734
+    second: Paper_UI_SpriteSheet_3
+  - first:
+      213: 824676028354333135
+    second: Paper_UI_SpriteSheet_4
+  - first:
+      213: 4041108338295356365
+    second: Paper_UI_SpriteSheet_5
+  - first:
+      213: 7528557169789657805
+    second: Paper_UI_SpriteSheet_6
+  - first:
+      213: 7422069689359562851
+    second: Paper_UI_SpriteSheet_7
+  - first:
+      213: -5233509047348718957
+    second: Paper_UI_SpriteSheet_8
+  - first:
+      213: 6227184531524768139
+    second: Paper_UI_SpriteSheet_9
+  - first:
+      213: 8387771370620080119
+    second: Paper_UI_SpriteSheet_10
+  - first:
+      213: 30709068593932019
+    second: Paper_UI_SpriteSheet_11
+  - first:
+      213: 5499022424796462543
+    second: Paper_UI_SpriteSheet_12
+  - first:
+      213: -4987627994288115277
+    second: Paper_UI_SpriteSheet_13
+  - first:
+      213: 8088023203224337117
+    second: Paper_UI_SpriteSheet_14
+  - first:
+      213: 2499948695615270433
+    second: Paper_UI_SpriteSheet_15
+  - first:
+      213: 2557149226292479832
+    second: Paper_UI_SpriteSheet_16
+  - first:
+      213: -6828068068180150620
+    second: Paper_UI_SpriteSheet_17
+  - first:
+      213: -2170377531522805429
+    second: Paper_UI_SpriteSheet_18
+  - first:
+      213: -8066857857609389013
+    second: Paper_UI_SpriteSheet_19
+  - first:
+      213: -8157637011604106265
+    second: Paper_UI_SpriteSheet_20
+  - first:
+      213: 502890718259838815
+    second: Paper_UI_SpriteSheet_21
+  - first:
+      213: -2778511460294362200
+    second: Paper_UI_SpriteSheet_22
+  - first:
+      213: 6071884370861656459
+    second: Paper_UI_SpriteSheet_23
+  - first:
+      213: -2070073693965751095
+    second: Paper_UI_SpriteSheet_24
+  - first:
+      213: -2350434344531770648
+    second: Paper_UI_SpriteSheet_25
+  - first:
+      213: -6960160906551061156
+    second: Paper_UI_SpriteSheet_26
+  - first:
+      213: 1070058398285653616
+    second: Paper_UI_SpriteSheet_27
+  - first:
+      213: 1432968175219911950
+    second: Paper_UI_SpriteSheet_28
+  - first:
+      213: -2189709479832379698
+    second: Paper_UI_SpriteSheet_29
+  - first:
+      213: 1754392965765954197
+    second: Paper_UI_SpriteSheet_30
+  - first:
+      213: -2559111204622929271
+    second: Paper_UI_SpriteSheet_31
+  - first:
+      213: 1808392765986809015
+    second: Paper_UI_SpriteSheet_32
+  - first:
+      213: -8746316716963205296
+    second: Paper_UI_SpriteSheet_33
+  - first:
+      213: 6452500184433785577
+    second: Paper_UI_SpriteSheet_34
+  - first:
+      213: -7992604043630946586
+    second: Paper_UI_SpriteSheet_35
+  - first:
+      213: 2243364026496558753
+    second: Paper_UI_SpriteSheet_36
+  - first:
+      213: -1681911903314985057
+    second: Paper_UI_SpriteSheet_37
+  - first:
+      213: 3156213625329759041
+    second: Paper_UI_SpriteSheet_38
+  - first:
+      213: -5446657994221031892
+    second: Paper_UI_SpriteSheet_39
+  - first:
+      213: 649434558296484339
+    second: Paper_UI_SpriteSheet_40
+  - first:
+      213: -2394912185837693406
+    second: Paper_UI_SpriteSheet_41
+  - first:
+      213: -8863051726107406266
+    second: Paper_UI_SpriteSheet_42
+  - first:
+      213: 4474723246928158062
+    second: Paper_UI_SpriteSheet_43
+  - first:
+      213: -74831264859571427
+    second: Paper_UI_SpriteSheet_44
+  - first:
+      213: 3679576338595090920
+    second: Paper_UI_SpriteSheet_45
+  - first:
+      213: 8500397365781912060
+    second: Paper_UI_SpriteSheet_46
+  - first:
+      213: 7953196179128228680
+    second: Paper_UI_SpriteSheet_47
+  - first:
+      213: 9169484158604058004
+    second: Paper_UI_SpriteSheet_48
+  - first:
+      213: 313975133555993990
+    second: Paper_UI_SpriteSheet_49
+  - first:
+      213: -6705166301990369805
+    second: Paper_UI_SpriteSheet_50
+  - first:
+      213: -4076845187763378982
+    second: Paper_UI_SpriteSheet_51
+  - first:
+      213: 6742598206875468834
+    second: Paper_UI_SpriteSheet_52
+  - first:
+      213: -4332712938522529607
+    second: Paper_UI_SpriteSheet_53
+  - first:
+      213: -8969693059052669783
+    second: Paper_UI_SpriteSheet_54
+  - first:
+      213: 3267273455356903611
+    second: Paper_UI_SpriteSheet_55
+  - first:
+      213: -4349312725753995325
+    second: Paper_UI_SpriteSheet_56
+  - first:
+      213: -9100634194666651255
+    second: Paper_UI_SpriteSheet_57
+  - first:
+      213: 1721270385953229509
+    second: Paper_UI_SpriteSheet_58
+  - first:
+      213: 4982673024625219071
+    second: Paper_UI_SpriteSheet_59
+  - first:
+      213: -5567766168032663990
+    second: Paper_UI_SpriteSheet_60
+  - first:
+      213: 4023915112856218895
+    second: Paper_UI_SpriteSheet_61
+  - first:
+      213: 456224081618150200
+    second: Paper_UI_SpriteSheet_62
+  - first:
+      213: 8433245650974553058
+    second: Paper_UI_SpriteSheet_63
+  - first:
+      213: 2221206214216188578
+    second: Paper_UI_SpriteSheet_64
+  - first:
+      213: -3512075576123935666
+    second: Paper_UI_SpriteSheet_65
+  - first:
+      213: 3405740222619118413
+    second: Paper_UI_SpriteSheet_66
+  - first:
+      213: 5788813364809499891
+    second: Paper_UI_SpriteSheet_67
+  - first:
+      213: 4210264957536105515
+    second: Paper_UI_SpriteSheet_68
+  - first:
+      213: -3969553024317947124
+    second: Paper_UI_SpriteSheet_69
+  - first:
+      213: 3120038026143010593
+    second: Paper_UI_SpriteSheet_70
+  - first:
+      213: 8573007630442495798
+    second: Paper_UI_SpriteSheet_71
+  - first:
+      213: 4844082489909030290
+    second: Paper_UI_SpriteSheet_72
+  - first:
+      213: -4776967493707204731
+    second: Paper_UI_SpriteSheet_73
+  - first:
+      213: -8176529223488930924
+    second: Paper_UI_SpriteSheet_74
+  - first:
+      213: -6502186192281977716
+    second: Paper_UI_SpriteSheet_75
+  - first:
+      213: 173741929104774401
+    second: Paper_UI_SpriteSheet_76
+  - first:
+      213: 7940504692494615629
+    second: Paper_UI_SpriteSheet_77
+  - first:
+      213: -3446223331297400804
+    second: Paper_UI_SpriteSheet_78
+  - first:
+      213: -2165767746978550162
+    second: Paper_UI_SpriteSheet_79
+  - first:
+      213: 3410180390566144639
+    second: Paper_UI_SpriteSheet_80
+  - first:
+      213: 4047721700925793962
+    second: Paper_UI_SpriteSheet_81
+  - first:
+      213: -434746587421934915
+    second: Paper_UI_SpriteSheet_82
+  - first:
+      213: -9089843956200457354
+    second: Paper_UI_SpriteSheet_83
+  - first:
+      213: 7001751138578751320
+    second: Paper_UI_SpriteSheet_84
+  - first:
+      213: -5234825747706357765
+    second: Paper_UI_SpriteSheet_85
+  - first:
+      213: 3477643937846486731
+    second: Paper_UI_SpriteSheet_86
+  - first:
+      213: 756065231549294875
+    second: Paper_UI_SpriteSheet_87
+  - first:
+      213: -6237848608684692482
+    second: Paper_UI_SpriteSheet_88
+  - first:
+      213: -3988717481536113736
+    second: Paper_UI_SpriteSheet_89
+  - first:
+      213: -2641199678353585410
+    second: Paper_UI_SpriteSheet_90
+  - first:
+      213: 4951702704837892575
+    second: Paper_UI_SpriteSheet_91
+  - first:
+      213: -3341343149457942506
+    second: Paper_UI_SpriteSheet_92
+  - first:
+      213: -7760717958601575368
+    second: Paper_UI_SpriteSheet_93
+  - first:
+      213: 1678818448415567909
+    second: Paper_UI_SpriteSheet_94
+  - first:
+      213: -6971919145872203584
+    second: Paper_UI_SpriteSheet_95
+  - first:
+      213: 3597483643790361456
+    second: Paper_UI_SpriteSheet_96
+  - first:
+      213: -5321230285315245258
+    second: Paper_UI_SpriteSheet_97
+  - first:
+      213: 5963406657401004429
+    second: Paper_UI_SpriteSheet_98
+  - first:
+      213: -2084328274558893148
+    second: Paper_UI_SpriteSheet_99
+  - first:
+      213: 1805321613505015587
+    second: Paper_UI_SpriteSheet_100
+  - first:
+      213: 6302688888301280890
+    second: Paper_UI_SpriteSheet_101
+  - first:
+      213: 6058170381220661808
+    second: Paper_UI_SpriteSheet_102
+  - first:
+      213: 4047418788153407019
+    second: Paper_UI_SpriteSheet_103
+  - first:
+      213: -3780077148909234903
+    second: Paper_UI_SpriteSheet_104
+  - first:
+      213: -3166259136485952036
+    second: Paper_UI_SpriteSheet_105
+  - first:
+      213: -3674962769621660497
+    second: Paper_UI_SpriteSheet_106
+  - first:
+      213: 5123766048849413992
+    second: Paper_UI_SpriteSheet_107
+  - first:
+      213: 1188529078297735519
+    second: Paper_UI_SpriteSheet_108
+  - first:
+      213: -4398485000535208473
+    second: Paper_UI_SpriteSheet_109
+  - first:
+      213: 8471076383380098069
+    second: Paper_UI_SpriteSheet_110
+  - first:
+      213: -4463183093530752704
+    second: Paper_UI_SpriteSheet_111
+  - first:
+      213: -8870544686804211518
+    second: Paper_UI_SpriteSheet_112
+  - first:
+      213: -8683019883276176627
+    second: Paper_UI_SpriteSheet_113
+  - first:
+      213: 2544821855560037355
+    second: Paper_UI_SpriteSheet_114
+  - first:
+      213: 7208242013327788679
+    second: Paper_UI_SpriteSheet_115
+  - first:
+      213: 4729499878178110421
+    second: Paper_UI_SpriteSheet_116
+  - first:
+      213: -6530759577490828905
+    second: Paper_UI_SpriteSheet_117
+  - first:
+      213: 9123912550493843587
+    second: Paper_UI_SpriteSheet_118
+  - first:
+      213: -3630086592348341033
+    second: Paper_UI_SpriteSheet_119
+  - first:
+      213: -8801719002145496332
+    second: Paper_UI_SpriteSheet_120
+  - first:
+      213: -4331486044977952245
+    second: Paper_UI_SpriteSheet_121
+  - first:
+      213: 2044943583962615840
+    second: Paper_UI_SpriteSheet_122
+  - first:
+      213: -6639017880785299171
+    second: Paper_UI_SpriteSheet_123
+  - first:
+      213: 6701775893532348550
+    second: Paper_UI_SpriteSheet_124
+  - first:
+      213: 8094929352371959204
+    second: Paper_UI_SpriteSheet_125
+  - first:
+      213: -4666503709031132394
+    second: Paper_UI_SpriteSheet_126
+  - first:
+      213: 8247952157372717244
+    second: Paper_UI_SpriteSheet_127
+  - first:
+      213: 6962887299254723449
+    second: Paper_UI_SpriteSheet_128
+  - first:
+      213: -3436528977763719369
+    second: Paper_UI_SpriteSheet_129
+  - first:
+      213: -5105022604544570047
+    second: Paper_UI_SpriteSheet_130
+  - first:
+      213: 8291031123665932576
+    second: Paper_UI_SpriteSheet_131
+  - first:
+      213: -4199862360289036793
+    second: Paper_UI_SpriteSheet_132
+  - first:
+      213: -1583994077459507192
+    second: Paper_UI_SpriteSheet_133
+  - first:
+      213: 8873549024653888647
+    second: Paper_UI_SpriteSheet_134
+  - first:
+      213: 2146501445939745269
+    second: Paper_UI_SpriteSheet_135
+  - first:
+      213: 3345855480186141323
+    second: Paper_UI_SpriteSheet_136
+  - first:
+      213: 6819892862500411089
+    second: Paper_UI_SpriteSheet_137
+  - first:
+      213: -2345573568840727587
+    second: Paper_UI_SpriteSheet_138
+  - first:
+      213: -5467598549363212642
+    second: Paper_UI_SpriteSheet_139
+  - first:
+      213: -2594282634728198359
+    second: Paper_UI_SpriteSheet_140
+  - first:
+      213: 9189868234955000607
+    second: Paper_UI_SpriteSheet_141
+  - first:
+      213: 2620151633411331928
+    second: Paper_UI_SpriteSheet_142
+  - first:
+      213: 5506974103220176928
+    second: Paper_UI_SpriteSheet_143
+  - first:
+      213: 8384989026619763787
+    second: Paper_UI_SpriteSheet_144
+  - first:
+      213: -3470202895721858281
+    second: Paper_UI_SpriteSheet_145
+  - first:
+      213: 7600872637758307802
+    second: Paper_UI_SpriteSheet_146
+  - first:
+      213: 9136141343947201250
+    second: Paper_UI_SpriteSheet_147
+  - first:
+      213: 1615167155713928893
+    second: Paper_UI_SpriteSheet_148
+  - first:
+      213: 5824461861288597856
+    second: Paper_UI_SpriteSheet_149
+  - first:
+      213: -4399489894115792205
+    second: Paper_UI_SpriteSheet_150
+  - first:
+      213: -5169940636869726038
+    second: Paper_UI_SpriteSheet_151
+  - first:
+      213: 8898460600337276974
+    second: Paper_UI_SpriteSheet_152
+  - first:
+      213: 2905331733398890557
+    second: Paper_UI_SpriteSheet_153
+  - first:
+      213: -4247782713974297144
+    second: Paper_UI_SpriteSheet_154
+  - first:
+      213: -5604606731567325130
+    second: Paper_UI_SpriteSheet_155
+  - first:
+      213: -1937056543242170023
+    second: Paper_UI_SpriteSheet_156
+  - first:
+      213: 5895836495732828253
+    second: Paper_UI_SpriteSheet_157
+  - first:
+      213: 7781449194811610978
+    second: Paper_UI_SpriteSheet_158
+  - first:
+      213: 6350397232599764011
+    second: Paper_UI_SpriteSheet_159
+  - first:
+      213: 5096665127939603729
+    second: Paper_UI_SpriteSheet_160
+  - first:
+      213: -8962440486681585509
+    second: Paper_UI_SpriteSheet_161
+  - first:
+      213: 1058966882265535157
+    second: Paper_UI_SpriteSheet_162
+  - first:
+      213: 2028518845120178880
+    second: Paper_UI_SpriteSheet_163
+  - first:
+      213: 895696250145641327
+    second: Paper_UI_SpriteSheet_164
+  - first:
+      213: -431540344626444017
+    second: Paper_UI_SpriteSheet_165
+  - first:
+      213: -5393938124488891112
+    second: Paper_UI_SpriteSheet_166
+  - first:
+      213: 2553363838729006175
+    second: Paper_UI_SpriteSheet_167
+  - first:
+      213: 2274057457554414681
+    second: Paper_UI_SpriteSheet_168
+  - first:
+      213: 2185550461633145581
+    second: Paper_UI_SpriteSheet_169
+  - first:
+      213: 9173403254938937876
+    second: Paper_UI_SpriteSheet_170
+  - first:
+      213: 7514440079455520727
+    second: Paper_UI_SpriteSheet_171
+  - first:
+      213: -5807971947076259432
+    second: Paper_UI_SpriteSheet_172
+  - first:
+      213: -655317386147180054
+    second: Paper_UI_SpriteSheet_173
+  - first:
+      213: 3928589363715532212
+    second: Paper_UI_SpriteSheet_174
+  - first:
+      213: -4379647081972859358
+    second: Paper_UI_SpriteSheet_175
+  - first:
+      213: -2890851255652397432
+    second: Paper_UI_SpriteSheet_176
+  - first:
+      213: -3752059320602142043
+    second: Paper_UI_SpriteSheet_177
+  - first:
+      213: -7218927685912871988
+    second: Paper_UI_SpriteSheet_178
+  - first:
+      213: 4775517486389999656
+    second: Paper_UI_SpriteSheet_179
+  - first:
+      213: -4464300280923018665
+    second: Paper_UI_SpriteSheet_180
+  - first:
+      213: -4335092194483191359
+    second: Paper_UI_SpriteSheet_181
+  - first:
+      213: -6189716413387646662
+    second: Paper_UI_SpriteSheet_182
+  - first:
+      213: 7218576784157198293
+    second: Paper_UI_SpriteSheet_183
+  - first:
+      213: 3123816199691675868
+    second: Paper_UI_SpriteSheet_184
+  - first:
+      213: 4782040912543415742
+    second: Paper_UI_SpriteSheet_185
+  - first:
+      213: -7400421585425864859
+    second: Paper_UI_SpriteSheet_186
+  - first:
+      213: -2232348208160358466
+    second: Paper_UI_SpriteSheet_187
+  - first:
+      213: -4391675520062986407
+    second: Paper_UI_SpriteSheet_188
+  - first:
+      213: 7041404473368594598
+    second: Paper_UI_SpriteSheet_189
+  - first:
+      213: 4214778274961392534
+    second: Paper_UI_SpriteSheet_190
+  - first:
+      213: -5993596243276048024
+    second: Paper_UI_SpriteSheet_191
+  - first:
+      213: -2625032519621509844
+    second: Paper_UI_SpriteSheet_192
+  - first:
+      213: 515608279941329547
+    second: Paper_UI_SpriteSheet_193
+  - first:
+      213: -6019132482945143116
+    second: Paper_UI_SpriteSheet_194
+  - first:
+      213: 7184014717783610992
+    second: Paper_UI_SpriteSheet_195
+  - first:
+      213: 7748661044805747414
+    second: Paper_UI_SpriteSheet_196
+  - first:
+      213: 4634853578483662707
+    second: Paper_UI_SpriteSheet_197
+  - first:
+      213: -7028337780022872737
+    second: Paper_UI_SpriteSheet_198
+  - first:
+      213: 6593505259958962147
+    second: Paper_UI_SpriteSheet_199
+  - first:
+      213: 1649521343565370847
+    second: Paper_UI_SpriteSheet_200
+  - first:
+      213: -4042962457000395281
+    second: Paper_UI_SpriteSheet_201
+  - first:
+      213: -3972803387256360208
+    second: Paper_UI_SpriteSheet_202
+  - first:
+      213: -4992134152710311844
+    second: Paper_UI_SpriteSheet_203
+  - first:
+      213: -1117780058469778887
+    second: Paper_UI_SpriteSheet_204
+  - first:
+      213: -292840476574600768
+    second: Paper_UI_SpriteSheet_205
+  - first:
+      213: -3139887937485784707
+    second: Paper_UI_SpriteSheet_206
+  - first:
+      213: -3862780184874046062
+    second: Paper_UI_SpriteSheet_207
+  - first:
+      213: -7293780565326846464
+    second: Paper_UI_SpriteSheet_208
+  - first:
+      213: -6681198071864034599
+    second: Paper_UI_SpriteSheet_209
+  - first:
+      213: 8220628642833524596
+    second: Paper_UI_SpriteSheet_210
+  - first:
+      213: -821409812284989173
+    second: Paper_UI_SpriteSheet_211
+  - first:
+      213: 6987374112521411850
+    second: Paper_UI_SpriteSheet_212
+  - first:
+      213: 2535749182342634439
+    second: Paper_UI_SpriteSheet_213
+  - first:
+      213: -6517683389743250799
+    second: Paper_UI_SpriteSheet_214
+  - first:
+      213: -616775881514319636
+    second: Paper_UI_SpriteSheet_215
+  - first:
+      213: -4757166296079387106
+    second: Paper_UI_SpriteSheet_216
+  - first:
+      213: 8115811018166294308
+    second: Paper_UI_SpriteSheet_217
+  - first:
+      213: 2238715979399784188
+    second: Paper_UI_SpriteSheet_218
+  - first:
+      213: 5077347380670568335
+    second: Paper_UI_SpriteSheet_219
+  - first:
+      213: -8349501037422430742
+    second: Paper_UI_SpriteSheet_220
+  - first:
+      213: 6349683847619407149
+    second: Paper_UI_SpriteSheet_221
+  - first:
+      213: 7502421663248471722
+    second: Paper_UI_SpriteSheet_222
+  - first:
+      213: 519556831813658187
+    second: Paper_UI_SpriteSheet_223
+  - first:
+      213: 3833960681719142505
+    second: Paper_UI_SpriteSheet_224
+  - first:
+      213: -6072724162993741036
+    second: Paper_UI_SpriteSheet_225
+  - first:
+      213: -4622076164333459712
+    second: Paper_UI_SpriteSheet_226
+  - first:
+      213: 738088388896987833
+    second: Paper_UI_SpriteSheet_227
+  - first:
+      213: 1865259580419795109
+    second: Paper_UI_SpriteSheet_228
+  - first:
+      213: 3133235945078105018
+    second: Paper_UI_SpriteSheet_229
+  - first:
+      213: 1807164915923524074
+    second: Paper_UI_SpriteSheet_230
+  - first:
+      213: 6441856563990393577
+    second: Paper_UI_SpriteSheet_231
+  - first:
+      213: 4115089265947289760
+    second: Paper_UI_SpriteSheet_232
+  - first:
+      213: 8750160300415318599
+    second: Paper_UI_SpriteSheet_233
+  - first:
+      213: 3495118099616626957
+    second: Paper_UI_SpriteSheet_234
+  - first:
+      213: -5793408954563601886
+    second: Paper_UI_SpriteSheet_235
+  - first:
+      213: -7602375937509474013
+    second: Paper_UI_SpriteSheet_236
+  - first:
+      213: 4279281151437069968
+    second: Paper_UI_SpriteSheet_237
+  - first:
+      213: -8903925928647412909
+    second: Paper_UI_SpriteSheet_238
+  - first:
+      213: 8491474746159076955
+    second: Paper_UI_SpriteSheet_239
+  - first:
+      213: 5193002101503394003
+    second: Paper_UI_SpriteSheet_240
+  - first:
+      213: 7975848984813544849
+    second: Paper_UI_SpriteSheet_241
+  - first:
+      213: -2732761460863921415
+    second: Paper_UI_SpriteSheet_242
+  - first:
+      213: 9120212095520845429
+    second: Paper_UI_SpriteSheet_243
+  - first:
+      213: -1406163420711217527
+    second: Paper_UI_SpriteSheet_244
+  - first:
+      213: 5551242500289356678
+    second: Paper_UI_SpriteSheet_245
+  - first:
+      213: -6281624243344844049
+    second: Paper_UI_SpriteSheet_246
+  - first:
+      213: 6094118841393633264
+    second: Paper_UI_SpriteSheet_247
+  - first:
+      213: -190461349894735746
+    second: Paper_UI_SpriteSheet_248
+  - first:
+      213: 6184766176909101536
+    second: Paper_UI_SpriteSheet_249
+  - first:
+      213: -7379927588836663869
+    second: Paper_UI_SpriteSheet_250
+  - first:
+      213: 1735035737959315711
+    second: Paper_UI_SpriteSheet_251
+  - first:
+      213: 8209719400031960535
+    second: Paper_UI_SpriteSheet_252
+  - first:
+      213: -4029643645560234633
+    second: Paper_UI_SpriteSheet_253
+  - first:
+      213: -2544265056738818233
+    second: Paper_UI_SpriteSheet_254
+  - first:
+      213: 8869824458949417772
+    second: Paper_UI_SpriteSheet_255
+  - first:
+      213: 8919748767599734192
+    second: Paper_UI_SpriteSheet_256
+  - first:
+      213: 4241262208222517850
+    second: Paper_UI_SpriteSheet_257
+  - first:
+      213: 5001419749175901698
+    second: Paper_UI_SpriteSheet_258
+  - first:
+      213: 5928126452262072783
+    second: Paper_UI_SpriteSheet_259
+  - first:
+      213: 3851309169813868831
+    second: Paper_UI_SpriteSheet_260
+  - first:
+      213: -5071593981898768985
+    second: Paper_UI_SpriteSheet_261
+  - first:
+      213: -7743414111204379768
+    second: Paper_UI_SpriteSheet_262
+  - first:
+      213: -7482940024537487731
+    second: Paper_UI_SpriteSheet_263
+  - first:
+      213: -3643997976922497519
+    second: Paper_UI_SpriteSheet_264
+  - first:
+      213: -1420988161630438637
+    second: Paper_UI_SpriteSheet_265
+  - first:
+      213: -4849267907475992452
+    second: Paper_UI_SpriteSheet_266
+  - first:
+      213: -3029303081501429908
+    second: Paper_UI_SpriteSheet_267
+  - first:
+      213: -688630690910285208
+    second: Paper_UI_SpriteSheet_268
+  - first:
+      213: -4015591185655636062
+    second: Paper_UI_SpriteSheet_269
+  - first:
+      213: 7757762918348734789
+    second: Paper_UI_SpriteSheet_270
+  - first:
+      213: -2884867864240111331
+    second: Paper_UI_SpriteSheet_271
+  - first:
+      213: -8089040739149903086
+    second: Paper_UI_SpriteSheet_272
+  - first:
+      213: -3658422667787089411
+    second: Paper_UI_SpriteSheet_273
+  - first:
+      213: -177368686415526923
+    second: Paper_UI_SpriteSheet_274
+  - first:
+      213: 7900008984270333181
+    second: Paper_UI_SpriteSheet_275
+  - first:
+      213: -7824368342070225713
+    second: Paper_UI_SpriteSheet_276
+  - first:
+      213: -3691297608699503167
+    second: Paper_UI_SpriteSheet_277
+  - first:
+      213: 7240454389718173226
+    second: Paper_UI_SpriteSheet_278
+  - first:
+      213: 897394151247038464
+    second: Paper_UI_SpriteSheet_279
+  - first:
+      213: -5875330488269519882
+    second: Paper_UI_SpriteSheet_280
+  - first:
+      213: 7708866719494447609
+    second: Paper_UI_SpriteSheet_281
+  - first:
+      213: 8878440516678572867
+    second: Paper_UI_SpriteSheet_282
+  - first:
+      213: 7694188722074894896
+    second: Paper_UI_SpriteSheet_283
+  - first:
+      213: 8250463590260551799
+    second: Paper_UI_SpriteSheet_284
+  - first:
+      213: 4203950738609358413
+    second: Paper_UI_SpriteSheet_285
+  - first:
+      213: 5184459366327434185
+    second: Paper_UI_SpriteSheet_286
+  - first:
+      213: 7253120901511356254
+    second: Paper_UI_SpriteSheet_287
+  - first:
+      213: -5751855102189410278
+    second: Paper_UI_SpriteSheet_288
+  - first:
+      213: -2465139628054037838
+    second: Paper_UI_SpriteSheet_289
+  - first:
+      213: -6207539892076637899
+    second: Paper_UI_SpriteSheet_290
+  - first:
+      213: -6921146887462744284
+    second: Paper_UI_SpriteSheet_291
+  - first:
+      213: 3619052620275121050
+    second: Paper_UI_SpriteSheet_292
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: VisionOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Paper_Medium
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 3741
+        width: 380
+        height: 413
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 40, y: 40, z: 40, w: 40}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da5f153d057273642811983f5e1571b2
+      internalID: -377859330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Small
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 4017
+        width: 389
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 40, y: 30, z: 40, w: 30}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44285e7c0b5dbd34f88e26704fb20d04
+      internalID: -1561922485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Wide
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 3955
+        width: 633
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 48, y: 40, z: 48, w: 40}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96282a1c5c35dcb4f94bbcb7ac52f8fa
+      internalID: 839850057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_001
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 3952
+        width: 192
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a456ff5ed0a25643a31ffedc4f07bf8
+      internalID: 901291926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_002
+      rect:
+        serializedVersion: 2
+        x: 2272
+        y: 3952
+        width: 192
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0cd6a573dc25974f8b1cf5ae77f0672
+      internalID: -120207980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_003
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 3914
+        width: 251
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 130f845c32c246345a4bc0e0253be509
+      internalID: -513615787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_004
+      rect:
+        serializedVersion: 2
+        x: 2272
+        y: 3760
+        width: 208
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd7ac02569bc5747bab2b3b137df016
+      internalID: -194109695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plate_Long
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 3649
+        width: 563
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 40, y: 30, z: 40, w: 30}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171a8f85c4ee0a34dbc76cbd2c9ca101
+      internalID: 2024836674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_005
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 3803
+        width: 295
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70919eb203ae98f4f8a2d7f254828084
+      internalID: -1534804443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_006
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 3720
+        width: 177
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a4aab52474e666449363f36c0dbfdb0
+      internalID: 1047955431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_007
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 3781
+        width: 233
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c71466aea8515c4984954d2062d181d
+      internalID: 112475650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_008
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 3696
+        width: 224
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f265943d2b33484784a2bfb27652e85
+      internalID: -2139166653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_009
+      rect:
+        serializedVersion: 2
+        x: 1993
+        y: 3840
+        width: 199
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7acf9b25b5bf7c949bace34d2b622669
+      internalID: -1366371593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_Card
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 3505
+        width: 391
+        height: 175
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 40, y: 40, z: 40, w: 40}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 060d4832bb5b9af4083ed6c37cb672bd
+      internalID: 942669908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_010
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 3664
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd6825388ff5e14e86182bc0dcd7cde
+      internalID: -1712349120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_011
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 3664
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ba1d90112f5e914ea8ddf20046ddd28
+      internalID: 1857712995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_012
+      rect:
+        serializedVersion: 2
+        x: 2272
+        y: 3568
+        width: 208
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4741b399f752ba44a8ce588f9fd85664
+      internalID: -1298332248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_Large
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 2941
+        width: 621
+        height: 503
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 116, y: 64, z: 96, w: 64}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2102f6daea83b94ab45a04cb61f1efb
+      internalID: 481101972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner_Arc
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 3424
+        width: 576
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05056029e8a0015439e3f209828d9c46
+      internalID: -608462791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_013
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 3328
+        width: 64
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dda402aa2e2bbc64581f48a8fd5ddcd9
+      internalID: 392290573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_014
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 3328
+        width: 64
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b6241a4fbf0f964ba95548920206961
+      internalID: 2130207312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner_Wave
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 3200
+        width: 416
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c505bc64c662c644d9836c875eebf4c9
+      internalID: 104713180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_015
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 3104
+        width: 64
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c90e0d2a5afae2a4fbd77629ab0743fa
+      internalID: -589526856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_016
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 3104
+        width: 64
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6239c53d276483344872edf8fa20140c
+      internalID: 1818346215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner_Wave_Small
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 3024
+        width: 416
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68d327cd054322f43a3e0e2b5e0db075
+      internalID: 801540356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_017
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 2896
+        width: 416
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d07622987aa02504d9074cda9ebe73dc
+      internalID: 514865606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_018
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 2965
+        width: 80
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a931deb43cbf3b24ba223a00bc8e8743
+      internalID: -823230539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_019
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 2965
+        width: 80
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6020cf10e1ddabb47945e945199a2da0
+      internalID: -1004067126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_020
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 2965
+        width: 80
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e29b54ffb03d764d9eb9a0f02bce45c
+      internalID: 1816100172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_021
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 2965
+        width: 80
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0df3b0b614f959946b942fe1e2e12355
+      internalID: -462376447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_022
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2965
+        width: 80
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91802152c83319c41abe1a666e03d2b3
+      internalID: 1481204322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_023
+      rect:
+        serializedVersion: 2
+        x: 2032
+        y: 2965
+        width: 80
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db113f701dc3528448fb55d5801ac2e5
+      internalID: -1155977036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_024
+      rect:
+        serializedVersion: 2
+        x: 2162
+        y: 2960
+        width: 13
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a6a0e3dfd19d0468519fe52eb50fbf
+      internalID: -1671667678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_025
+      rect:
+        serializedVersion: 2
+        x: 2163
+        y: 3009
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b9c220433071b340b0b1578083d033f
+      internalID: 1133033634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_026
+      rect:
+        serializedVersion: 2
+        x: 2194
+        y: 3009
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 892e43e1d3f8c8941815482a43e7d23f
+      internalID: 2083350772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_027
+      rect:
+        serializedVersion: 2
+        x: 2194
+        y: 2960
+        width: 13
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2be25d8cccee1f478b58abe30febe4c
+      internalID: -170152051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_028
+      rect:
+        serializedVersion: 2
+        x: 2226
+        y: 2970
+        width: 60
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a822e1f1c438464881165466c8b0c01
+      internalID: 1326347651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_029
+      rect:
+        serializedVersion: 2
+        x: 2228
+        y: 3009
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6567139f3810c2c449e983ba4adae344
+      internalID: 857896557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_030
+      rect:
+        serializedVersion: 2
+        x: 2260
+        y: 3009
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0fe41adfa67106459ee441ffa9377e5
+      internalID: 1454882819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_031
+      rect:
+        serializedVersion: 2
+        x: 2292
+        y: 3003
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 909b818e6fc1d594ebd980b9ee84ff27
+      internalID: 54970667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_032
+      rect:
+        serializedVersion: 2
+        x: 2306
+        y: 2962
+        width: 13
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f375fc40f11fa34ebd69b33168459ad
+      internalID: 2065942931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_033
+      rect:
+        serializedVersion: 2
+        x: 2324
+        y: 3003
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 043d7292a636c074eba7d81ae32e1f5a
+      internalID: 1080868818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_034
+      rect:
+        serializedVersion: 2
+        x: 2337
+        y: 2962
+        width: 13
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 221b2281c7400864c8c2a4aaad6c4d81
+      internalID: -188926144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_035
+      rect:
+        serializedVersion: 2
+        x: 2356
+        y: 3011
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 295e9c16086b10b47b048968d8d5878c
+      internalID: 112721756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_036
+      rect:
+        serializedVersion: 2
+        x: 2372
+        y: 2966
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ced5469dd2b326f4a8e4ebebc864d12b
+      internalID: 1231783847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_037
+      rect:
+        serializedVersion: 2
+        x: 2394
+        y: 3003
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 246190cabd18401499cd4e2f79922c33
+      internalID: -2061394157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_038
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 2885
+        width: 80
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b900bd2cc9b5f04eaf0b47e0b9c105d
+      internalID: -2072311603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_039
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 2885
+        width: 80
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e5ae1b6a5b07cc48937b067997d5e33
+      internalID: 1846844303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_040
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 2885
+        width: 80
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d675d4eb5913f0b47911a1549b0c88c9
+      internalID: -1685265146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_041
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 2885
+        width: 80
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 047338f7410f8704c8480f4e81fd1450
+      internalID: -1178972880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_042
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2885
+        width: 80
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53f079e03096c644b0a718ad892a6df
+      internalID: -945501195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_043
+      rect:
+        serializedVersion: 2
+        x: 2032
+        y: 2885
+        width: 80
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5917787c865f4b240891637a05a00559
+      internalID: 27823153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_044
+      rect:
+        serializedVersion: 2
+        x: 2165
+        y: 2915
+        width: 84
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49bec3e0247ac2b47bed180dbe73688c
+      internalID: 1779291406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_045
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 2689
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 118250f226418074db7cfb71cf35cd6e
+      internalID: -915186102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_046
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 2682
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ba12193ebec0343b5ce35e4ddc1b19
+      internalID: -1446462143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_047
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 2688
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4d0ca863caf11d489dd7f1e10c0e3e9
+      internalID: 1831320464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_048
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 2693
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54bc7f936ba7f4c43a45fede041fc0f4
+      internalID: -547810040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_049
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 2699
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2efd424483ce2a4faa6256ca46e9644
+      internalID: -649289906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_050
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 2704
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5a1191864439ac4ca0909cbcd53a8bf
+      internalID: 1775669829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_051
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 2706
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb932e96fd62622429e6dbe8d6b562ba
+      internalID: 414051366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_052
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 2708
+        width: 52
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f32ebbc654846094f83c6dd769165676
+      internalID: -996007637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_053
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 2708
+        width: 56
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b5180379fe82b438c15044d632f738
+      internalID: 471315986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_054
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 2708
+        width: 58
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30024b9ce4fbb83468177cd3e1d806e2
+      internalID: 653730089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_055
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 2708
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd7a903fd17913d459df469247c608ee
+      internalID: 461564988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_056
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 2708
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02cec16743a91e74ca739f062d28fa40
+      internalID: 1566841818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_057
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 2708
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 402d567c81d72a44dbddda321a74abcf
+      internalID: -1103249492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_058
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 2708
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f0f2f88d5df9f443a9515ecfc7ca725
+      internalID: 2084039388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_059
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 2708
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54e27bfbc62432446b3ddc015a922d81
+      internalID: 1309992598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_060
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 2706
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2010dc468e9657c47ab1575e82fa13d2
+      internalID: -1285003871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_061
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 2704
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 961d658f161f2204198f7e02d2fcb46a
+      internalID: 1279116956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_062
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 2699
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d462695b5981c884d9520b82938d83b9
+      internalID: 917075876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_063
+      rect:
+        serializedVersion: 2
+        x: 1513
+        y: 2693
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5baa6164f5cf814db976a8b142c181e
+      internalID: -665163338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_064
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 2688
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe32f816b98e8404da4327cd68563919
+      internalID: -1363855881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_065
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 2682
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78ac24ed411a99c4793d8cc4a50bd70b
+      internalID: -1039812002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Board_Stone_Ring
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 2000
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fe5bb006c69008429c46185aaa71138
+      internalID: 1995278824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Board_Wood_Ring
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 2000
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d7d5638c3c6cb4dbbc226f20dc0a2b
+      internalID: 1393469222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Board_Wood_Ring_Alt
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 2000
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0c98b3bc168084ab6fae6b2b91bf3e
+      internalID: -1242303265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Board_Wood
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1376
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 802523b4f6b89c44ab03a1687b2c6bd5
+      internalID: 2099761114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Board_Wood_Dark
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1376
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bffdc957f2c667d46aad0b952b12b63f
+      internalID: 329041228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Board_Sand
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 752
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c774b4e53676d9044a8a002ec3bc41b0
+      internalID: -164400857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Board_Blue
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 752
+        width: 768
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4990391ca295f264a8772be282034813
+      internalID: 948979076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_066
+      rect:
+        serializedVersion: 2
+        x: 3632
+        y: 624
+        width: 576
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a9882033df2b6d4ba9696811e47f520
+      internalID: -1608397907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_067
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 363
+        width: 210
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6906bd8673f53d4892868658fbf3c72
+      internalID: -1295293676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_068
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 439
+        width: 109
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a54b4414411b88948b8552cfa6d2f9f9
+      internalID: -1988824428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_069
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 560
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e418c5057d59ec048a8410ec5936d813
+      internalID: 1593474772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_070
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 560
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8981dbf34da33a8478de3f9c2f917185
+      internalID: -1287746611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_071
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 562
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b580fe28dbca2a64ea0d154267ccd58c
+      internalID: 1715059186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_072
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 560
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30903312ea517344f9c4f7a8df7d0c3b
+      internalID: -1996655969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_073
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 560
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d92be084ea322429ce6837896baa46
+      internalID: 601128811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_074
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 559
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde6f5ff0043d4147a680fee1e49e4f3
+      internalID: -926670149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_075
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 529
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a48851f3de0232e49b9b98885ab0d73f
+      internalID: 1438054711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_076
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 480
+        width: 484
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f860d31fbb4d85459a820e4c90497fe
+      internalID: 1513696392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_077
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 495
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f568d9baf16d293468c3cb7322edd6d5
+      internalID: -269088336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_078
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 501
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe3ce2f0ab6ff34d9e18a37b595d7ea
+      internalID: 616918841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_079
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 506
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f572ce0452940d34db88d685925c0396
+      internalID: -649025074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_080
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 528
+        width: 75
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79a41c6ea4f6e3248b03b79074f75b49
+      internalID: 550980630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_081
+      rect:
+        serializedVersion: 2
+        x: 2010
+        y: 528
+        width: 59
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46cde349858e0b44b12cdebdd530645
+      internalID: 123809123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_082
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 528
+        width: 59
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a788943d5fdf234289d059bac8fce17
+      internalID: -413637144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_083
+      rect:
+        serializedVersion: 2
+        x: 2202
+        y: 528
+        width: 59
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6fcae5f61c727c4c957b85b2b901d15
+      internalID: 2125176148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_084
+      rect:
+        serializedVersion: 2
+        x: 2298
+        y: 528
+        width: 59
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b25c95dee12d54da0d21e988318634
+      internalID: 1847408184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_085
+      rect:
+        serializedVersion: 2
+        x: 2394
+        y: 528
+        width: 59
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93293f674465bd4439f30f344ca33ccb
+      internalID: -109824926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_086
+      rect:
+        serializedVersion: 2
+        x: 2656
+        y: 480
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 369b7518d2ab2ef42a6a679b18b0251f
+      internalID: -1298910591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_087
+      rect:
+        serializedVersion: 2
+        x: 2790
+        y: 486
+        width: 84
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3774e81a8bc5c34c86329c7e8d8890c
+      internalID: 1772029527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_088
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 448
+        width: 192
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d26bff36c1919cd4eba648893a2aac19
+      internalID: 1976750592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_089
+      rect:
+        serializedVersion: 2
+        x: 3232
+        y: 448
+        width: 192
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 095b69f7986d8e14e87dc4c5b992d271
+      internalID: -33083500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_090
+      rect:
+        serializedVersion: 2
+        x: 3696
+        y: 448
+        width: 416
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46da5bf1fe2e798449cee698e6136773
+      internalID: -1513452223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_091
+      rect:
+        serializedVersion: 2
+        x: 4304
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a76d8ae1895fc148bf2c187c2c910a6
+      internalID: -660324041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_092
+      rect:
+        serializedVersion: 2
+        x: 4304
+        y: 560
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3323fce4705d25468ddba3daae3d260
+      internalID: -565897470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_093
+      rect:
+        serializedVersion: 2
+        x: 4432
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f543cb9624fd33a41af27793bbcacdd5
+      internalID: 1277018999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_094
+      rect:
+        serializedVersion: 2
+        x: 4432
+        y: 560
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f785b230ae4196a41a4fcef1cfd2633f
+      internalID: 61571304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_095
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 322
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83939267bfd2c646bc6f8cc049f3eb4
+      internalID: 625462064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_096
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8441b4907f9f1a4a941df452d0a2965
+      internalID: 184581846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_097
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0407f3414fafa942805877a8cd8f86b
+      internalID: -398321737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_098
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98a5437ecfb03dd4fab81a7bee29ccaa
+      internalID: -969989380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_099
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 528
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4c991984f0e114387da44ab6c45166
+      internalID: -2023920872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_100
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 496
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bae81e562694334693814973c5082a0
+      internalID: -2018066465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_101
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 451
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 840efd13c1f2b9c4e94cec23c828a38d
+      internalID: -1287178754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_102
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 449
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49df47a61b701ad4581b8cdf93cc1e14
+      internalID: -1766348515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_103
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 496
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1778834435861e942a8550ba1779a669
+      internalID: -680817707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_104
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 341
+        width: 57
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5548fd1f4ad77f442bb06bb92a9c873f
+      internalID: -1158564923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_105
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 528
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bac2d119c0d9bf42b4385674b129373
+      internalID: -2096980676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_106
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 497
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0621065fe0f5eba44bb0a5a770906f37
+      internalID: -1285946051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_107
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 449
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac9f257d8389eb4c80319565162d883
+      internalID: 1804868244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_108
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 528
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 083b377693014aa4a90946a4f150cb10
+      internalID: -18519316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_109
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 449
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 813db9b8f6d271e44bf60e84781ff1bf
+      internalID: 1903738580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_110
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 449
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f5c7b98fbcecb749901c584c92aa443
+      internalID: 1055859667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_111
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 528
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3f9cf8e807bf1f40a6d341628a287e2
+      internalID: -1864492243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_112
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 320
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf5cde0ad27651b49be7019948048c58
+      internalID: -1414685504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_113
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 449
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0afdad1aea3c2e44c9f56c0b62a7f284
+      internalID: 1715772548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_114
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 528
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdd13f268754b274c970a19c00532523
+      internalID: 2107939223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_115
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 529
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 311f4bac64f9ec746a00f96a49a5451f
+      internalID: -679529589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_116
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 320
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b8621514484b224caaf8282b1496986
+      internalID: 1034469917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_117
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 368
+        width: 484
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b640e678672af9f419bfd1bc6177709c
+      internalID: -1841281838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_118
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 396
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20bd317d7aaf00f47af7c80bdc6f0e28
+      internalID: -124103061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_119
+      rect:
+        serializedVersion: 2
+        x: 1678
+        y: 398
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2b52050350be1242900ab5a7bbfb6ad
+      internalID: -27284147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_120
+      rect:
+        serializedVersion: 2
+        x: 2007
+        y: 387
+        width: 64
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e7b4d4ebb43d1488d16a7c59012001
+      internalID: 1529479011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_121
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 457
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 214dc27f741a5aa459f98ff5972c86d0
+      internalID: 739056725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_122
+      rect:
+        serializedVersion: 2
+        x: 2103
+        y: 387
+        width: 64
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53e868a64b9ba3a4f879f73b9ebdb2e3
+      internalID: -356700001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_123
+      rect:
+        serializedVersion: 2
+        x: 2118
+        y: 451
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e7f2bea7762269468e5f766e0d71409
+      internalID: -857118461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_124
+      rect:
+        serializedVersion: 2
+        x: 2199
+        y: 387
+        width: 64
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d230bc5156ad508418c5b8c5b6262ecc
+      internalID: -836206350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_125
+      rect:
+        serializedVersion: 2
+        x: 2220
+        y: 457
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442a726255a9d0e4f870ce0a8eef357f
+      internalID: -1318752046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_126
+      rect:
+        serializedVersion: 2
+        x: 2295
+        y: 387
+        width: 64
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f643adec723734baa4e82b6b68861f
+      internalID: -2059564451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_127
+      rect:
+        serializedVersion: 2
+        x: 2307
+        y: 455
+        width: 41
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8e399d15d2577c458c7a6cef8d4a867
+      internalID: -87401473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_128
+      rect:
+        serializedVersion: 2
+        x: 2391
+        y: 387
+        width: 64
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e90eff5be37a6e942916e9fe16b36a0a
+      internalID: -2060221277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_129
+      rect:
+        serializedVersion: 2
+        x: 2412
+        y: 457
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e8cecddc06e4740bdb533461ac7dec
+      internalID: 763090911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_130
+      rect:
+        serializedVersion: 2
+        x: 2656
+        y: 368
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8019c69ccb4dbe743b2653d8589d7732
+      internalID: 346621454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_131
+      rect:
+        serializedVersion: 2
+        x: 2790
+        y: 374
+        width: 84
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f72a488e42ac90a4b94a0b5d1c1e8f28
+      internalID: 640722161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_132
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 368
+        width: 192
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86df87aef3b00694aa2a13ed17cd8f55
+      internalID: 1557152348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_133
+      rect:
+        serializedVersion: 2
+        x: 3232
+        y: 256
+        width: 208
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d2dd5426fc9a44094a8b38e9b1620c
+      internalID: 819348842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_134
+      rect:
+        serializedVersion: 2
+        x: 4064
+        y: 310
+        width: 80
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfab1caaba396554cb2f04ab28f1202e
+      internalID: 422214234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_135
+      rect:
+        serializedVersion: 2
+        x: 4304
+        y: 480
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5601004059863744fab084dead5d8bdc
+      internalID: -624623147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_136
+      rect:
+        serializedVersion: 2
+        x: 4304
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32a54dd1486dec74f956df80aa378a0d
+      internalID: -382013902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_137
+      rect:
+        serializedVersion: 2
+        x: 4432
+        y: 480
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b036ac22f58e284cb7071904627f05a
+      internalID: -1046537718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_138
+      rect:
+        serializedVersion: 2
+        x: 4432
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7228f0f9ddb51c54b81ef226b7c2b43d
+      internalID: -105931174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_139
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 261
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 396a9e3686863574d9052dc232fab4cc
+      internalID: 388991893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_140
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 181
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55bd3e58346ce74419cd6a0325e9b9ab
+      internalID: 791787885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_141
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 261
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ba8542c7902434c99f5898cb911bcb
+      internalID: -142070593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_142
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 181
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f33e2ceb0278fda43bf3a5b79fb24638
+      internalID: 519136653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_143
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 261
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16e4e3e75bb2e1042a0726e11b3de5b5
+      internalID: 2096177955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_144
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 181
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff3c008bed9f9aa44a3da8d3e4773d60
+      internalID: 1649074375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_145
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 295
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e2facc5dbe2a124bbbe919e0621fe0b
+      internalID: -657075401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_146
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 240
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7a3b58aaf2e586469f81e506cb73b1c
+      internalID: 1379405812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_147
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 240
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fbdfaec164014a4ea3ecc2ddc0f24d5
+      internalID: -819706898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_148
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 240
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b8ec4f9d9017ca47a5c6cad516fdbe2
+      internalID: 1181568501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_149
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 336
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d7a937a0b7b050429e04ac41b0b47e7
+      internalID: -1347893181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_150
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 272
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da0158c3825b3b04d921f848c362b5a9
+      internalID: 1980972812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_151
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 305
+        width: 123
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 797bc1722225c99468bc20235368af1e
+      internalID: 938041186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_152
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 336
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 793c51b341b3b104e9614dcc97530d0c
+      internalID: -1012554832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_153
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 272
+        width: 48
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9100e56b178b70a44a2fc9f4c002678a
+      internalID: -1120908916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_154
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 226
+        width: 97
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1e0fd206ab576e41a70ba90cf201807
+      internalID: -1137912788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_155
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 229
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38ad5d49677a2524dbdfa56ccb4bdca6
+      internalID: -573378788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_156
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 233
+        width: 51
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79919cfab7eae174290d866e5379e33f
+      internalID: 1280039343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_157
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 232
+        width: 55
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82d6e9330a963f84fb7fb29b0ba47b70
+      internalID: 1583928571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_158
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 256
+        width: 484
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cea57fcaae8edf42a7b664c1dda9881
+      internalID: 1380301304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_159
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 144
+        width: 484
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbd1506b271cf5f499f210e9bfddc950
+      internalID: -206426945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_160
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 286
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d1a8d1861051904aa2061587e31e9c5
+      internalID: 1465385404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_161
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 286
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e9592e23739d34e8769587c8769503
+      internalID: -1783274606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_162
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 286
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0f95d1302acaab45afa1f18bca0730f
+      internalID: 288411316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_163
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 286
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d08a24d34840d3146a20e4c4ef8de5c7
+      internalID: 1922259037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_164
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 284
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 064760e44edc8bb4a839d7dfafb5c85d
+      internalID: -36724388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_165
+      rect:
+        serializedVersion: 2
+        x: 2646
+        y: 244
+        width: 120
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59856c521661d2b4ab607059c59718c6
+      internalID: -59450658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_166
+      rect:
+        serializedVersion: 2
+        x: 2715
+        y: 315
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 949361236fdaead4c9a0cd3d7b6bd291
+      internalID: 1400600200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_167
+      rect:
+        serializedVersion: 2
+        x: 2723
+        y: 245
+        width: 26
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7daf5a1bc1487b941a05e41e5530698b
+      internalID: 1411497847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_168
+      rect:
+        serializedVersion: 2
+        x: 2747
+        y: 315
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f5e87d679fa439438a62f51f287b6c2
+      internalID: 510699366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_169
+      rect:
+        serializedVersion: 2
+        x: 2779
+        y: 274
+        width: 13
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14622b31444dfc043abd50f3f7fce6ab
+      internalID: -1706475615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_170
+      rect:
+        serializedVersion: 2
+        x: 2810
+        y: 274
+        width: 13
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bc34b0c03755084ca592490039385f8
+      internalID: 2064292792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_171
+      rect:
+        serializedVersion: 2
+        x: 2836
+        y: 278
+        width: 57
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a194f275ff8c8fd4383c376d6875c46a
+      internalID: -628610876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_172
+      rect:
+        serializedVersion: 2
+        x: 2839
+        y: 317
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a1941377b860e945a0304754ceaaf17
+      internalID: -1628931740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_173
+      rect:
+        serializedVersion: 2
+        x: 2875
+        y: 312
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43dbaf2b40a7bce49b3b8d870bea5288
+      internalID: -5916683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_174
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 256
+        width: 224
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 224374c322af969439a19a995d3123bc
+      internalID: 1206150778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_175
+      rect:
+        serializedVersion: 2
+        x: 3696
+        y: 240
+        width: 112
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7a06df548096c544a244020a92130ed
+      internalID: -1983007928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_176
+      rect:
+        serializedVersion: 2
+        x: 3824
+        y: 310
+        width: 224
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b0710ef15ea7a41a82f3e66d7adb77
+      internalID: -1075980059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_177
+      rect:
+        serializedVersion: 2
+        x: 4304
+        y: 304
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b60719c719c854fb757f9bdebf1d2e
+      internalID: -304829419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_178
+      rect:
+        serializedVersion: 2
+        x: 4304
+        y: 224
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a7764cb9a8582e4db591dde643593d7
+      internalID: 1666559364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_179
+      rect:
+        serializedVersion: 2
+        x: 4432
+        y: 304
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20807936061652843b8a77adf7b8befb
+      internalID: -763856782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_180
+      rect:
+        serializedVersion: 2
+        x: 4432
+        y: 224
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07f20880448f9d44b970becbf48e66e7
+      internalID: -148970436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_181
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 101
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a5b6f7f9aa8aef4e9d46c02aa468bbe
+      internalID: 1200483092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_182
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 101
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb70585be47648f468f99300e096c033
+      internalID: 407125085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_183
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 101
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30dd298a304105747b8d2dc3947c0537
+      internalID: 472770638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_184
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 195
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d347e33bd8188d94182d86b5bf1d74aa
+      internalID: 1164231610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_185
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 176
+        width: 5
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8be3f2a271dde2941bef1141818af773
+      internalID: -1959912558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_186
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 144
+        width: 5
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4efc4c5ed63e45c4989a7ab82ede025f
+      internalID: 1115882334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_187
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 151
+        width: 47
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 946a477f4c3529e47993fda9410d0262
+      internalID: 995498294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_188
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 209
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96b172a7c0f17074d984930fc9208e90
+      internalID: 1925949860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_189
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 177
+        width: 59
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 025259ba3904b8c43b31fa95f0690309
+      internalID: 187987547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_190
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 170
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f50fb4086095b7749a74317559724eaa
+      internalID: -544963699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_191
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 165
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58d4a8eba45e0b848952c8ea9bb61009
+      internalID: 1376099218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_192
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 159
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c128904f8ff68fb4c8a12428092a915c
+      internalID: -1666308104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_193
+      rect:
+        serializedVersion: 2
+        x: 1888
+        y: 180
+        width: 16
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e4f531463b0660449115b7ebb0f5047
+      internalID: -136336436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_194
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 134
+        width: 43
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82bbc26200a2046479dd8579f132621a
+      internalID: 2135215724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_195
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 180
+        width: 16
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d8a0397932331439765d251ccb64da
+      internalID: 49648386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_196
+      rect:
+        serializedVersion: 2
+        x: 1952
+        y: 180
+        width: 16
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b3707c69cb69614cbdeb2dd4e35da44
+      internalID: 81418453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_197
+      rect:
+        serializedVersion: 2
+        x: 3232
+        y: 64
+        width: 208
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60c142a4007d44c4aab08fe5b7d71104
+      internalID: -316141865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_198
+      rect:
+        serializedVersion: 2
+        x: 3696
+        y: 128
+        width: 112
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cd2e41185dff154a84ba4059cce4175
+      internalID: -1231902089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_199
+      rect:
+        serializedVersion: 2
+        x: 3824
+        y: 144
+        width: 192
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 042f34274cf899642827a0ef72dbe7e9
+      internalID: -319681895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paper_UI_200
+      rect:
+        serializedVersion: 2
+        x: 4032
+        y: 128
+        width: 112
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56744adc6cd43a042becfdf90cb2b62b
+      internalID: -1020818635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 956c9766f4cdbdb479e11ae7e5425fd0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Banner_Arc: -608462791
+      Banner_Wave: 104713180
+      Banner_Wave_Small: 801540356
+      Board_Blue: 948979076
+      Board_Sand: -164400857
+      Board_Stone_Ring: 1995278824
+      Board_Wood: 2099761114
+      Board_Wood_Dark: 329041228
+      Board_Wood_Ring: 1393469222
+      Board_Wood_Ring_Alt: -1242303265
+      Paper_Card: 942669908
+      Paper_Large: 481101972
+      Paper_Medium: -377859330
+      Paper_UI_001: 901291926
+      Paper_UI_002: -120207980
+      Paper_UI_003: -513615787
+      Paper_UI_004: -194109695
+      Paper_UI_005: -1534804443
+      Paper_UI_006: 1047955431
+      Paper_UI_007: 112475650
+      Paper_UI_008: -2139166653
+      Paper_UI_009: -1366371593
+      Paper_UI_010: -1712349120
+      Paper_UI_011: 1857712995
+      Paper_UI_012: -1298332248
+      Paper_UI_013: 392290573
+      Paper_UI_014: 2130207312
+      Paper_UI_015: -589526856
+      Paper_UI_016: 1818346215
+      Paper_UI_017: 514865606
+      Paper_UI_018: -823230539
+      Paper_UI_019: -1004067126
+      Paper_UI_020: 1816100172
+      Paper_UI_021: -462376447
+      Paper_UI_022: 1481204322
+      Paper_UI_023: -1155977036
+      Paper_UI_024: -1671667678
+      Paper_UI_025: 1133033634
+      Paper_UI_026: 2083350772
+      Paper_UI_027: -170152051
+      Paper_UI_028: 1326347651
+      Paper_UI_029: 857896557
+      Paper_UI_030: 1454882819
+      Paper_UI_031: 54970667
+      Paper_UI_032: 2065942931
+      Paper_UI_033: 1080868818
+      Paper_UI_034: -188926144
+      Paper_UI_035: 112721756
+      Paper_UI_036: 1231783847
+      Paper_UI_037: -2061394157
+      Paper_UI_038: -2072311603
+      Paper_UI_039: 1846844303
+      Paper_UI_040: -1685265146
+      Paper_UI_041: -1178972880
+      Paper_UI_042: -945501195
+      Paper_UI_043: 27823153
+      Paper_UI_044: 1779291406
+      Paper_UI_045: -915186102
+      Paper_UI_046: -1446462143
+      Paper_UI_047: 1831320464
+      Paper_UI_048: -547810040
+      Paper_UI_049: -649289906
+      Paper_UI_050: 1775669829
+      Paper_UI_051: 414051366
+      Paper_UI_052: -996007637
+      Paper_UI_053: 471315986
+      Paper_UI_054: 653730089
+      Paper_UI_055: 461564988
+      Paper_UI_056: 1566841818
+      Paper_UI_057: -1103249492
+      Paper_UI_058: 2084039388
+      Paper_UI_059: 1309992598
+      Paper_UI_060: -1285003871
+      Paper_UI_061: 1279116956
+      Paper_UI_062: 917075876
+      Paper_UI_063: -665163338
+      Paper_UI_064: -1363855881
+      Paper_UI_065: -1039812002
+      Paper_UI_066: -1608397907
+      Paper_UI_067: -1295293676
+      Paper_UI_068: -1988824428
+      Paper_UI_069: 1593474772
+      Paper_UI_070: -1287746611
+      Paper_UI_071: 1715059186
+      Paper_UI_072: -1996655969
+      Paper_UI_073: 601128811
+      Paper_UI_074: -926670149
+      Paper_UI_075: 1438054711
+      Paper_UI_076: 1513696392
+      Paper_UI_077: -269088336
+      Paper_UI_078: 616918841
+      Paper_UI_079: -649025074
+      Paper_UI_080: 550980630
+      Paper_UI_081: 123809123
+      Paper_UI_082: -413637144
+      Paper_UI_083: 2125176148
+      Paper_UI_084: 1847408184
+      Paper_UI_085: -109824926
+      Paper_UI_086: -1298910591
+      Paper_UI_087: 1772029527
+      Paper_UI_088: 1976750592
+      Paper_UI_089: -33083500
+      Paper_UI_090: -1513452223
+      Paper_UI_091: -660324041
+      Paper_UI_092: -565897470
+      Paper_UI_093: 1277018999
+      Paper_UI_094: 61571304
+      Paper_UI_095: 625462064
+      Paper_UI_096: 184581846
+      Paper_UI_097: -398321737
+      Paper_UI_098: -969989380
+      Paper_UI_099: -2023920872
+      Paper_UI_100: -2018066465
+      Paper_UI_101: -1287178754
+      Paper_UI_102: -1766348515
+      Paper_UI_103: -680817707
+      Paper_UI_104: -1158564923
+      Paper_UI_105: -2096980676
+      Paper_UI_106: -1285946051
+      Paper_UI_107: 1804868244
+      Paper_UI_108: -18519316
+      Paper_UI_109: 1903738580
+      Paper_UI_110: 1055859667
+      Paper_UI_111: -1864492243
+      Paper_UI_112: -1414685504
+      Paper_UI_113: 1715772548
+      Paper_UI_114: 2107939223
+      Paper_UI_115: -679529589
+      Paper_UI_116: 1034469917
+      Paper_UI_117: -1841281838
+      Paper_UI_118: -124103061
+      Paper_UI_119: -27284147
+      Paper_UI_120: 1529479011
+      Paper_UI_121: 739056725
+      Paper_UI_122: -356700001
+      Paper_UI_123: -857118461
+      Paper_UI_124: -836206350
+      Paper_UI_125: -1318752046
+      Paper_UI_126: -2059564451
+      Paper_UI_127: -87401473
+      Paper_UI_128: -2060221277
+      Paper_UI_129: 763090911
+      Paper_UI_130: 346621454
+      Paper_UI_131: 640722161
+      Paper_UI_132: 1557152348
+      Paper_UI_133: 819348842
+      Paper_UI_134: 422214234
+      Paper_UI_135: -624623147
+      Paper_UI_136: -382013902
+      Paper_UI_137: -1046537718
+      Paper_UI_138: -105931174
+      Paper_UI_139: 388991893
+      Paper_UI_140: 791787885
+      Paper_UI_141: -142070593
+      Paper_UI_142: 519136653
+      Paper_UI_143: 2096177955
+      Paper_UI_144: 1649074375
+      Paper_UI_145: -657075401
+      Paper_UI_146: 1379405812
+      Paper_UI_147: -819706898
+      Paper_UI_148: 1181568501
+      Paper_UI_149: -1347893181
+      Paper_UI_150: 1980972812
+      Paper_UI_151: 938041186
+      Paper_UI_152: -1012554832
+      Paper_UI_153: -1120908916
+      Paper_UI_154: -1137912788
+      Paper_UI_155: -573378788
+      Paper_UI_156: 1280039343
+      Paper_UI_157: 1583928571
+      Paper_UI_158: 1380301304
+      Paper_UI_159: -206426945
+      Paper_UI_160: 1465385404
+      Paper_UI_161: -1783274606
+      Paper_UI_162: 288411316
+      Paper_UI_163: 1922259037
+      Paper_UI_164: -36724388
+      Paper_UI_165: -59450658
+      Paper_UI_166: 1400600200
+      Paper_UI_167: 1411497847
+      Paper_UI_168: 510699366
+      Paper_UI_169: -1706475615
+      Paper_UI_170: 2064292792
+      Paper_UI_171: -628610876
+      Paper_UI_172: -1628931740
+      Paper_UI_173: -5916683
+      Paper_UI_174: 1206150778
+      Paper_UI_175: -1983007928
+      Paper_UI_176: -1075980059
+      Paper_UI_177: -304829419
+      Paper_UI_178: 1666559364
+      Paper_UI_179: -763856782
+      Paper_UI_180: -148970436
+      Paper_UI_181: 1200483092
+      Paper_UI_182: 407125085
+      Paper_UI_183: 472770638
+      Paper_UI_184: 1164231610
+      Paper_UI_185: -1959912558
+      Paper_UI_186: 1115882334
+      Paper_UI_187: 995498294
+      Paper_UI_188: 1925949860
+      Paper_UI_189: 187987547
+      Paper_UI_190: -544963699
+      Paper_UI_191: 1376099218
+      Paper_UI_192: -1666308104
+      Paper_UI_193: -136336436
+      Paper_UI_194: 2135215724
+      Paper_UI_195: 49648386
+      Paper_UI_196: 81418453
+      Paper_UI_197: -316141865
+      Paper_UI_198: -1231902089
+      Paper_UI_199: -319681895
+      Paper_UI_200: -1020818635
+      Plate_Long: 2024836674
+      Plate_Small: -1561922485
+      Plate_Wide: 839850057
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
