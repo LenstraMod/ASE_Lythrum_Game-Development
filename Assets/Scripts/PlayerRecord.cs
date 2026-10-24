@@ -136,7 +136,7 @@ public class PlayerRecord : MonoBehaviour
             rb.bodyType = RigidbodyType2D.Kinematic;   // moved by the replay, still triggers pressure plates
             rb.gravityScale = 0f;
         }
-        foreach (Collider2D col in shadow.GetComponentsInChildren<Collider2D>()) col.isTrigger = true;
+        //foreach (Collider2D col in shadow.GetComponentsInChildren<Collider2D>()) col.isTrigger = true;
 
         // same feet-only collider the player has, so it presses plates the way the player does
         BoxCollider2D playerBox = GetComponent<BoxCollider2D>();

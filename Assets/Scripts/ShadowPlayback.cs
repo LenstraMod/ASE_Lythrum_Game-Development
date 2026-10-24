@@ -55,7 +55,8 @@ public class ShadowPlayback : MonoBehaviour
             float timePassed = playbackTimer - currentSnap.timestamp;
             float lerpPercent = timeBetween > 0f ? timePassed / timeBetween : 1f;
 
-            transform.position = Vector3.Lerp(currentSnap.position, nextSnap.position, lerpPercent);
+            Vector3 newPos = Vector3.Lerp(currentSnap.position, nextSnap.position, lerpPercent);
+            GetComponent<Rigidbody2D>().MovePosition(newPos);
 
             shadowAnimator.SetFloat("LastInputX", currentSnap.lastInputX);
             shadowAnimator.SetFloat("LastInputY", currentSnap.lastInputY);
