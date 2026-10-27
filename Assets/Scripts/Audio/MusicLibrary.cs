@@ -11,6 +11,8 @@ public class MusicLibrary : ScriptableObject
     {
         public AudioClip clip;
         [Range(0f, 1f)] public float volume = 0.5f;
+        [Tooltip("Tick for room/wind/drone sounds: the layer then follows the Ambience slider instead of Music.")]
+        public bool ambience;
     }
 
     [Serializable]

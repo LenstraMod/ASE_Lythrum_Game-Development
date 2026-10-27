@@ -71,22 +71,34 @@ public class MainMenuController : MonoBehaviour
 
     void StartNewGame(int slot)
     {
-        StartTransition(() => GameSession.EnsureInstance().StartNewGame(slot, newGameScene));
+        StartTransition(() =>
+        {
+            GameSession.EnsureInstance().StartNewGame(slot, newGameScene);
+            return true;
+        });
     }
 
-    void StartTransition(Action loadScene)
+    // loadScene mengembalikan false kalau scene tidak jadi dibuka (mis. save rusak), menu lalu dibuka lagi.
+    void StartTransition(Func<bool> loadScene)
     {
         if (loading) return;
         loading = true;
         StartCoroutine(FadeAndLoad(loadScene));
     }
 
-    IEnumerator FadeAndLoad(Action loadScene)
+    IEnumerator FadeAndLoad(Func<bool> loadScene)
     {
         menuGroup.interactable = false;
-        fadeOverlay.GetComponent<CanvasGroup>().blocksRaycasts = true;
+        CanvasGroup overlay = fadeOverlay.GetComponent<CanvasGroup>();
+        overlay.blocksRaycasts = true;
         yield return fadeOverlay.FadeTo(1f, fadeOutDuration);
-        loadScene();
+        if (loadScene()) yield break;
+
+        yield return fadeOverlay.FadeTo(0f, fadeOutDuration);
+        overlay.blocksRaycasts = false;
+        loading = false;
+        if (slotPanel.gameObject.activeSelf) CloseSlots();
+        else SetMenuActive(true);
     }
 
     public void OpenSettings()

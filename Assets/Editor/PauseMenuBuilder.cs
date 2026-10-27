@@ -32,7 +32,11 @@ public static class PauseMenuBuilder
         panel.gameObject.AddComponent<Image>().color = new Color(0f, 0f, 0f, 0.55f);
 
         MainMenuSceneBuilder.ConfigurePaperSheet();
+<<<<<<< HEAD
         RectTransform box = MainMenuSceneBuilder.CreatePaperPanel(panel, "Box", new Vector2(600f, 640f), "Paused", font);
+=======
+        RectTransform box = MainMenuSceneBuilder.CreatePaperPanel(panel, "Box", new Vector2(600f, 650f), "Paused", font);
+>>>>>>> e367a82958083c87f3d8fb99a3c24f479a41e907
         var top = new Vector2(0.5f, 1f);
 
         string[] labels = { "Resume", "Save Game", "Settings", "Main Menu", "Quit" };
@@ -48,8 +52,15 @@ public static class PauseMenuBuilder
         var status = MainMenuSceneBuilder.CreateText(box, "Status", "", font, null, 30f, TextAlignmentOptions.Center);
         MainMenuSceneBuilder.Place(status.rectTransform, new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0f, 70f), new Vector2(420f, 50f));
         status.color = MainMenuSceneBuilder.InkAccent;
+<<<<<<< HEAD
         // Panel setting di dalam lapisan gelap; kotak menu disembunyikan selama setting terbuka.
         SettingsPanel settings = MainMenuSceneBuilder.BuildSettingsPanel(panel, font, out Button settingsBack);
+=======
+
+        // Panel Settings sama dengan menu utama; menggantikan kotak pause selama dibuka (latar gelap tetap).
+        SettingsPanel settings = MainMenuSceneBuilder.BuildSettingsPanel(panel, font, out Button settingsBack);
+
+>>>>>>> e367a82958083c87f3d8fb99a3c24f479a41e907
         ConfirmDialog confirm = MainMenuSceneBuilder.BuildConfirmDialog(root.transform, font);
 
         var pause = root.AddComponent<PauseMenu>();

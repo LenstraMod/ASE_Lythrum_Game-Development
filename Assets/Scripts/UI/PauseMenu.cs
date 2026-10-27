@@ -20,11 +20,17 @@ public class PauseMenu : MonoBehaviour
 
     private float previousTimeScale = 1f;
 
+    bool SettingsOpen => settingsPanel != null && settingsPanel.gameObject.activeSelf;
+
     void Start()
     {
         panel.SetActive(false);
         confirmDialog.gameObject.SetActive(false);
+<<<<<<< HEAD
         settingsPanel.gameObject.SetActive(false);
+=======
+        if (settingsPanel != null) settingsPanel.gameObject.SetActive(false);
+>>>>>>> e367a82958083c87f3d8fb99a3c24f479a41e907
 
         if (EventSystem.current == null)
         {
@@ -38,7 +44,11 @@ public class PauseMenu : MonoBehaviour
         if (!Input.GetKeyDown(KeyCode.Escape)) return;
 
         if (confirmDialog.IsOpen) confirmDialog.Close();
+<<<<<<< HEAD
         else if (settingsPanel.gameObject.activeSelf) CloseSettings();
+=======
+        else if (SettingsOpen) CloseSettings();
+>>>>>>> e367a82958083c87f3d8fb99a3c24f479a41e907
         else if (IsPaused) Resume();
         else Pause();
     }
@@ -65,11 +75,30 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         confirmDialog.Close();
+<<<<<<< HEAD
         if (settingsPanel.gameObject.activeSelf) settingsPanel.Close();
         menuBox.SetActive(true);
+=======
+        if (SettingsOpen) settingsPanel.Close();
+        if (menuBox != null) menuBox.SetActive(true);
+>>>>>>> e367a82958083c87f3d8fb99a3c24f479a41e907
         panel.SetActive(false);
         Time.timeScale = previousTimeScale;
         IsPaused = false;
+    }
+
+    public void OpenSettings()
+    {
+        menuBox.SetActive(false);
+        settingsPanel.Open();
+        if (EventSystem.current != null) EventSystem.current.SetSelectedGameObject(settingsPanel.FirstSelected);
+    }
+
+    public void CloseSettings()
+    {
+        settingsPanel.Close();
+        menuBox.SetActive(true);
+        if (EventSystem.current != null) EventSystem.current.SetSelectedGameObject(settingsButton);
     }
 
     public void SaveGame()

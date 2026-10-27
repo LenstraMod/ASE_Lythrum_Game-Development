@@ -10,7 +10,7 @@ public class AudioManager : MonoBehaviour
     const string LibraryResourceName = "SfxLibrary";
     const int VoiceCount = 12;
 
-    // 0-1, multiplies every sound. Hook an options slider to this later.
+    // 0-1, multiplies every sound. Set by the "Effects" slider (GameSettings).
     public static float MasterVolume = 1f;
 
     static AudioManager instance;

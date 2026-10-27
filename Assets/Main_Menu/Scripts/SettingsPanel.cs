@@ -1,9 +1,14 @@
+<<<<<<< HEAD
+=======
+using System;
+>>>>>>> e367a82958083c87f3d8fb99a3c24f479a41e907
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+<<<<<<< HEAD
 // Panel pengaturan (dipakai Main Menu dan Pause Menu): volume master/musik/efek, resolusi, fullscreen, VSync.
 // Semua disimpan di PlayerPrefs.
 public class SettingsPanel : MonoBehaviour
@@ -25,12 +30,29 @@ public class SettingsPanel : MonoBehaviour
     [SerializeField] private Button resolutionPrevious;
     [SerializeField] private Button resolutionNext;
     [SerializeField] private TMP_Text resolutionValue;
+=======
+// Panel pengaturan: volume per kanal, resolusi dan fullscreen (lihat GameSettings).
+// Dipakai di menu utama dan di menu pause.
+public class SettingsPanel : MonoBehaviour
+{
+    [Serializable]
+    class VolumeRow
+    {
+        public GameSettings.Channel channel;
+        public Slider slider;
+        public TMP_Text value;
+    }
+
+    [SerializeField] private VolumeRow[] volumes;
+    [SerializeField] private TMP_Dropdown resolutionDropdown;
+>>>>>>> e367a82958083c87f3d8fb99a3c24f479a41e907
     [SerializeField] private Toggle fullscreenToggle;
     [SerializeField] private Toggle vSyncToggle;
 
     private readonly List<Vector2Int> resolutions = new List<Vector2Int>();
     private int resolutionIndex;
 
+<<<<<<< HEAD
     // Terapkan setting tersimpan saat game mulai, sebelum scene mana pun di-load.
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     static void ApplySaved()
@@ -57,10 +79,31 @@ public class SettingsPanel : MonoBehaviour
         resolutionNext.onClick.AddListener(() => StepResolution(1));
         fullscreenToggle.onValueChanged.AddListener(SetFullscreen);
         vSyncToggle.onValueChanged.AddListener(SetVSync);
+=======
+    private List<Vector2Int> resolutions;
+
+    // Kontrol pertama, untuk dipilih saat panel dibuka dengan keyboard/gamepad.
+    public GameObject FirstSelected => volumes.Length > 0 ? volumes[0].slider.gameObject : null;
+
+    void Awake()
+    {
+        foreach (VolumeRow row in volumes)
+        {
+            VolumeRow current = row;
+            current.slider.onValueChanged.AddListener(value =>
+            {
+                GameSettings.SetVolume(current.channel, value);
+                UpdateLabel(current, value);
+            });
+        }
+        resolutionDropdown.onValueChanged.AddListener(SetResolution);
+        fullscreenToggle.onValueChanged.AddListener(GameSettings.SetFullscreen);
+>>>>>>> e367a82958083c87f3d8fb99a3c24f479a41e907
     }
 
     public void Open()
     {
+<<<<<<< HEAD
         masterSlider.SetValueWithoutNotify(AudioListener.volume);
         musicSlider.SetValueWithoutNotify(MusicManager.MasterVolume);
         sfxSlider.SetValueWithoutNotify(AudioManager.MasterVolume);
@@ -72,16 +115,28 @@ public class SettingsPanel : MonoBehaviour
         vSyncToggle.SetIsOnWithoutNotify(QualitySettings.vSyncCount > 0);
         LoadResolutions();
 
+=======
+        foreach (VolumeRow row in volumes)
+        {
+            float value = GameSettings.GetVolume(row.channel);
+            row.slider.SetValueWithoutNotify(value);
+            UpdateLabel(row, value);
+        }
+        fullscreenToggle.SetIsOnWithoutNotify(Screen.fullScreen);
+        RefreshResolutions();
+>>>>>>> e367a82958083c87f3d8fb99a3c24f479a41e907
         gameObject.SetActive(true);
         if (EventSystem.current != null) EventSystem.current.SetSelectedGameObject(masterSlider.gameObject);
     }
 
     public void Close()
     {
+        resolutionDropdown.Hide();
         PlayerPrefs.Save();
         gameObject.SetActive(false);
     }
 
+<<<<<<< HEAD
     void SetMasterVolume(float value)
     {
         AudioListener.volume = value;
@@ -132,10 +187,25 @@ public class SettingsPanel : MonoBehaviour
         PlayerPrefs.SetInt(WidthKey, size.x);
         PlayerPrefs.SetInt(HeightKey, size.y);
         UpdateResolutionLabel();
+=======
+    void RefreshResolutions()
+    {
+        resolutions = GameSettings.Resolutions();
+        Vector2Int current = GameSettings.CurrentResolution;
+
+        var options = new List<string>();
+        foreach (Vector2Int size in resolutions) options.Add(size.x + " x " + size.y);
+
+        resolutionDropdown.ClearOptions();
+        resolutionDropdown.AddOptions(options);
+        resolutionDropdown.SetValueWithoutNotify(resolutions.IndexOf(current));
+        resolutionDropdown.RefreshShownValue();
+>>>>>>> e367a82958083c87f3d8fb99a3c24f479a41e907
     }
 
-    void SetFullscreen(bool value)
+    void SetResolution(int index)
     {
+<<<<<<< HEAD
         Screen.fullScreenMode = ToMode(value);
         PlayerPrefs.SetInt(FullscreenKey, value ? 1 : 0);
     }
@@ -162,5 +232,13 @@ public class SettingsPanel : MonoBehaviour
     static FullScreenMode ToMode(bool fullscreen)
     {
         return fullscreen ? FullScreenMode.FullScreenWindow : FullScreenMode.Windowed;
+=======
+        GameSettings.SetResolution(resolutions[index]);
+    }
+
+    static void UpdateLabel(VolumeRow row, float value)
+    {
+        if (row.value != null) row.value.text = Mathf.RoundToInt(value * 100f) + "%";
+>>>>>>> e367a82958083c87f3d8fb99a3c24f479a41e907
     }
 }

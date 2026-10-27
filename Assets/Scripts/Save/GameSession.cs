@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -65,6 +66,12 @@ public class GameSession : MonoBehaviour
         SaveData data = SaveSystem.Load(slot);
         if (data == null) return false;
 
+        if (!Application.CanStreamedLevelBeLoaded(data.sceneName))
+        {
+            Debug.LogError("Save slot " + (slot + 1) + " menunjuk ke scene '" + data.sceneName + "' yang tidak ada di Build Settings.");
+            return false;
+        }
+
         ActiveSlot = slot;
         PlayTime = data.playTime;
         pendingLoad = data;
@@ -77,9 +84,17 @@ public class GameSession : MonoBehaviour
         var player = FindAnyObjectByType<PlayerHealth>();
         if (player == null) return false;
 
+        // Pakai scene tempat player berada, bukan active scene, dan tolak save yang nanti tidak bisa di-load.
+        string sceneName = player.gameObject.scene.name;
+        if (!Application.CanStreamedLevelBeLoaded(sceneName))
+        {
+            Debug.LogError("Tidak bisa save: scene '" + sceneName + "' belum disimpan atau tidak ada di Build Settings.");
+            return false;
+        }
+
         var data = new SaveData
         {
-            sceneName = SceneManager.GetActiveScene().name,
+            sceneName = sceneName,
             checkpoint = player.RespawnPoint,
             health = player.CurrentHealth,
             playTime = PlayTime,
@@ -108,7 +123,22 @@ public class GameSession : MonoBehaviour
     {
         yield return null;
         var player = FindAnyObjectByType<PlayerHealth>();
-        if (player != null) player.RestoreState(data.health, data.checkpoint);
+        if (player == null) yield break;
+
+        Vector3 delta = data.checkpoint - player.transform.position;
+        player.RestoreState(data.health, data.checkpoint);
+
+        // Sama seperti SceneEntry: ikutkan Rigidbody2D dan beri tahu Cinemachine supaya kamera tidak menggeser dari spawn awal.
+        Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.position = data.checkpoint;
+            rb.linearVelocity = Vector2.zero;
+        }
+        Physics2D.SyncTransforms();
+
+        foreach (CinemachineCamera cam in FindObjectsByType<CinemachineCamera>())
+            cam.OnTargetObjectWarped(player.transform, delta);
     }
 
     void SpawnPauseMenu()
