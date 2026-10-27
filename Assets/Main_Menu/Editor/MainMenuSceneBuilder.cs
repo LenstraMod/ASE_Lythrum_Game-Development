@@ -22,7 +22,7 @@ public static class MainMenuSceneBuilder
     const string Root = "Assets/Main_Menu";
     const string ScenePath = Root + "/MainMenu.unity";
     // Scene pertama saat New Game. Harus berisi Player dengan PlayerHealth agar save & pause berfungsi.
-    const string NewGameScenePath = "Assets/Scenes/SettingInput.unity";
+    const string NewGameScenePath = "Assets/Scenes/Maps/City.unity";
     const string LayerFolder = Root + "/Assets_MainMenu/Layers";
     const string FontPath = Root + "/Fonts/Cinzel.ttf";
     const string FontAssetPath = Root + "/Fonts/Cinzel SDF.asset";
@@ -233,7 +233,7 @@ public static class MainMenuSceneBuilder
         }
 
         // Semua karakter yang dipakai menu (termasuk info slot save) dimasukkan ke atlas sejak awal.
-        asset.TryAddCharacters("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789%:.,-!?'|/() ");
+        asset.TryAddCharacters("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789%:.,-!?'|/()<> ");
         EditorUtility.SetDirty(asset);
         AssetDatabase.SaveAssets();
         return asset;
@@ -520,7 +520,8 @@ public static class MainMenuSceneBuilder
         return rect;
     }
 
-    static SettingsPanel BuildSettingsPanel(Transform canvas, TMP_FontAsset font, out Button back)
+    // Dipakai juga oleh PauseMenuBuilder, jadi Main Menu dan Pause Menu punya panel setting yang sama.
+    internal static SettingsPanel BuildSettingsPanel(Transform canvas, TMP_FontAsset font, out Button back)
     {
         var resources = new DefaultControls.Resources
         {
@@ -530,55 +531,103 @@ public static class MainMenuSceneBuilder
             checkmark = AssetDatabase.GetBuiltinExtraResource<Sprite>("UI/Skin/Checkmark.psd"),
         };
 
-        var top = new Vector2(0.5f, 1f);
-        RectTransform panelRect = CreatePaperPanel(canvas, "SettingsPanel", new Vector2(780f, 500f), "Settings", font);
+        RectTransform panelRect = CreatePaperPanel(canvas, "SettingsPanel", new Vector2(900f, 760f), "Settings", font);
+        var panel = panelRect.gameObject.AddComponent<SettingsPanel>();
 
-        // Baris volume
-        var volumeLabel = CreateText(panelRect, "VolumeLabel", "Volume", font, null, 38f, TextAlignmentOptions.Left);
-        Place(volumeLabel.rectTransform, top, top, new Vector2(-190f, -160f), new Vector2(260f, 60f));
-        volumeLabel.color = InkColor;
+        // Satu baris per setting: label di kiri, kontrol di kanan.
+        string[] volumes = { "Master", "Music", "Sfx" };
+        string[] volumeLabels = { "Master Volume", "Music", "Effects" };
+        for (int i = 0; i < volumes.Length; i++)
+        {
+            float y = -150f - i * 80f;
+            CreateSettingLabel(panelRect, volumes[i] + "Label", volumeLabels[i], font, y);
+            Slider slider = CreateSettingSlider(panelRect, volumes[i] + "Slider", resources, y);
+            var value = CreateText(panelRect, volumes[i] + "Value", "100%", font, null, 34f, TextAlignmentOptions.Right);
+            Place(value.rectTransform, new Vector2(0.5f, 1f), new Vector2(0.5f, 1f), new Vector2(330f, y), new Vector2(110f, 60f));
+            value.color = InkColor;
 
-        var slider = DefaultControls.CreateSlider(resources).GetComponent<Slider>();
-        slider.name = "VolumeSlider";
-        slider.transform.SetParent(panelRect, false);
-        Place((RectTransform)slider.transform, top, top, new Vector2(70f, -160f), new Vector2(280f, 24f));
-        slider.minValue = 0f;
-        slider.maxValue = 1f;
-        slider.value = 1f;
-        slider.transform.Find("Background").GetComponent<Image>().color = new Color(InkColor.r, InkColor.g, InkColor.b, 0.25f);
-        slider.fillRect.GetComponent<Image>().color = InkAccent;
-        slider.handleRect.GetComponent<Image>().color = InkColor;
+            string field = volumes[i].ToLowerInvariant();
+            SetField(panel, field + "Slider", slider);
+            SetField(panel, field + "Value", value);
+        }
 
-        var volumeValue = CreateText(panelRect, "VolumeValue", "100%", font, null, 34f, TextAlignmentOptions.Right);
-        Place(volumeValue.rectTransform, top, top, new Vector2(265f, -160f), new Vector2(100f, 60f));
-        volumeValue.color = InkColor;
+        // Resolusi: < 1920 x 1080 >
+        CreateSettingLabel(panelRect, "ResolutionLabel", "Resolution", font, -390f);
+        Button previous = CreateSettingArrow(panelRect, "ResolutionPrevious", "<", font, -5f, -390f);
+        Button next = CreateSettingArrow(panelRect, "ResolutionNext", ">", font, 335f, -390f);
+        var resolution = CreateText(panelRect, "ResolutionValue", "1920 x 1080", font, null, 34f, TextAlignmentOptions.Center);
+        Place(resolution.rectTransform, new Vector2(0.5f, 1f), new Vector2(0.5f, 1f), new Vector2(165f, -390f), new Vector2(280f, 60f));
+        resolution.color = InkColor;
 
-        // Baris fullscreen
-        var fullscreenLabel = CreateText(panelRect, "FullscreenLabel", "Fullscreen", font, null, 38f, TextAlignmentOptions.Left);
-        Place(fullscreenLabel.rectTransform, top, top, new Vector2(-190f, -250f), new Vector2(260f, 60f));
-        fullscreenLabel.color = InkColor;
-
-        var toggle = DefaultControls.CreateToggle(resources).GetComponent<Toggle>();
-        toggle.name = "FullscreenToggle";
-        toggle.transform.SetParent(panelRect, false);
-        Object.DestroyImmediate(toggle.transform.Find("Label").gameObject);   // label legacy diganti TMP di atas
-        Place((RectTransform)toggle.transform, top, top, new Vector2(-35f, -250f), new Vector2(40f, 40f));
-        var toggleBackground = (RectTransform)toggle.transform.Find("Background");
-        Place(toggleBackground, Vector2.zero, Vector2.one, Vector2.zero, Vector2.zero);
-        toggleBackground.GetComponent<Image>().color = new Color(InkColor.r, InkColor.g, InkColor.b, 0.25f);
-        toggle.graphic.color = InkColor;
+        CreateSettingLabel(panelRect, "FullscreenLabel", "Fullscreen", font, -470f);
+        Toggle fullscreen = CreateSettingToggle(panelRect, "FullscreenToggle", resources, -470f);
+        CreateSettingLabel(panelRect, "VSyncLabel", "VSync", font, -550f);
+        Toggle vSync = CreateSettingToggle(panelRect, "VSyncToggle", resources, -550f);
 
         back = CreateButton(panelRect, "BackButton", "Back", font, null, 0);
         Place((RectTransform)back.transform, new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0f, 75f), new Vector2(300f, 64f));
         back.GetComponent<TMP_Text>().alignment = TextAlignmentOptions.Center;
         ApplyInkStyle(back);
 
-        var panel = panelRect.gameObject.AddComponent<SettingsPanel>();
-        SetField(panel, "volumeSlider", slider);
-        SetField(panel, "volumeValue", volumeValue);
-        SetField(panel, "fullscreenToggle", toggle);
+        SetField(panel, "resolutionPrevious", previous);
+        SetField(panel, "resolutionNext", next);
+        SetField(panel, "resolutionValue", resolution);
+        SetField(panel, "fullscreenToggle", fullscreen);
+        SetField(panel, "vSyncToggle", vSync);
         panelRect.gameObject.SetActive(false);
         return panel;
+    }
+
+    static void CreateSettingLabel(Transform parent, string name, string text, TMP_FontAsset font, float y)
+    {
+        var top = new Vector2(0.5f, 1f);
+        var label = CreateText(parent, name, text, font, null, 36f, TextAlignmentOptions.Left);
+        Place(label.rectTransform, top, top, new Vector2(-230f, y), new Vector2(330f, 60f));
+        label.color = InkColor;
+    }
+
+    static Slider CreateSettingSlider(Transform parent, string name, DefaultControls.Resources resources, float y)
+    {
+        var top = new Vector2(0.5f, 1f);
+        var slider = DefaultControls.CreateSlider(resources).GetComponent<Slider>();
+        slider.name = name;
+        slider.transform.SetParent(parent, false);
+        Place((RectTransform)slider.transform, top, top, new Vector2(120f, y), new Vector2(280f, 24f));
+        slider.minValue = 0f;
+        slider.maxValue = 1f;
+        slider.value = 1f;
+        slider.transform.Find("Background").GetComponent<Image>().color = new Color(InkColor.r, InkColor.g, InkColor.b, 0.25f);
+        slider.fillRect.GetComponent<Image>().color = InkAccent;
+        slider.handleRect.GetComponent<Image>().color = InkColor;
+        return slider;
+    }
+
+    static Toggle CreateSettingToggle(Transform parent, string name, DefaultControls.Resources resources, float y)
+    {
+        var top = new Vector2(0.5f, 1f);
+        var toggle = DefaultControls.CreateToggle(resources).GetComponent<Toggle>();
+        toggle.name = name;
+        toggle.transform.SetParent(parent, false);
+        Object.DestroyImmediate(toggle.transform.Find("Label").gameObject);   // label legacy diganti TMP
+        Place((RectTransform)toggle.transform, top, top, new Vector2(0f, y), new Vector2(40f, 40f));
+        var toggleBackground = (RectTransform)toggle.transform.Find("Background");
+        Place(toggleBackground, Vector2.zero, Vector2.one, Vector2.zero, Vector2.zero);
+        toggleBackground.GetComponent<Image>().color = new Color(InkColor.r, InkColor.g, InkColor.b, 0.25f);
+        toggle.graphic.color = InkColor;
+        return toggle;
+    }
+
+    static Button CreateSettingArrow(Transform parent, string name, string label, TMP_FontAsset font, float x, float y)
+    {
+        var top = new Vector2(0.5f, 1f);
+        Button button = CreateButton(parent, name, label, font, null, 0);
+        Object.DestroyImmediate(button.GetComponent<LayoutElement>());
+        Place((RectTransform)button.transform, top, top, new Vector2(x, y), new Vector2(50f, 60f));
+        var text = button.GetComponent<TMP_Text>();
+        text.alignment = TextAlignmentOptions.Center;
+        text.fontSize = 44f;
+        ApplyInkStyle(button);
+        return button;
     }
 
     internal static Button CreateButton(Transform parent, string name, string label, TMP_FontAsset font, Material material, int index)

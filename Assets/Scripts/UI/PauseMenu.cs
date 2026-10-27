@@ -4,15 +4,18 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.UI;
 using UnityEngine.SceneManagement;
 
-// Menu pause di scene gameplay (Esc): Resume, Save Game, Main Menu, Quit.
+// Menu pause di scene gameplay (Esc): Resume, Save Game, Settings, Main Menu, Quit.
 public class PauseMenu : MonoBehaviour
 {
     public static bool IsPaused { get; private set; }
 
     [SerializeField] private GameObject panel;
+    [SerializeField] private GameObject menuBox;
     [SerializeField] private TMP_Text statusText;
     [SerializeField] private ConfirmDialog confirmDialog;
+    [SerializeField] private SettingsPanel settingsPanel;
     [SerializeField] private GameObject firstSelected;
+    [SerializeField] private GameObject settingsButton;
     [SerializeField] private string mainMenuScene = "MainMenu";
 
     private float previousTimeScale = 1f;
@@ -21,6 +24,7 @@ public class PauseMenu : MonoBehaviour
     {
         panel.SetActive(false);
         confirmDialog.gameObject.SetActive(false);
+        settingsPanel.gameObject.SetActive(false);
 
         if (EventSystem.current == null)
         {
@@ -34,6 +38,7 @@ public class PauseMenu : MonoBehaviour
         if (!Input.GetKeyDown(KeyCode.Escape)) return;
 
         if (confirmDialog.IsOpen) confirmDialog.Close();
+        else if (settingsPanel.gameObject.activeSelf) CloseSettings();
         else if (IsPaused) Resume();
         else Pause();
     }
@@ -60,6 +65,8 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         confirmDialog.Close();
+        if (settingsPanel.gameObject.activeSelf) settingsPanel.Close();
+        menuBox.SetActive(true);
         panel.SetActive(false);
         Time.timeScale = previousTimeScale;
         IsPaused = false;
@@ -71,6 +78,19 @@ public class PauseMenu : MonoBehaviour
         statusText.text = session.SaveGame()
             ? "Game saved to Slot " + (session.ActiveSlot + 1)
             : "Save failed";
+    }
+
+    public void OpenSettings()
+    {
+        menuBox.SetActive(false);
+        settingsPanel.Open();
+    }
+
+    public void CloseSettings()
+    {
+        settingsPanel.Close();
+        menuBox.SetActive(true);
+        if (EventSystem.current != null) EventSystem.current.SetSelectedGameObject(settingsButton);
     }
 
     public void ReturnToMainMenu()

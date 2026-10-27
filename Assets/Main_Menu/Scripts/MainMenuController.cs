@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class MainMenuController : MonoBehaviour
 {
-    [SerializeField] private string newGameScene = "SettingInput";
+    [SerializeField] private string newGameScene = "City";
     [SerializeField] private CanvasGroup menuGroup;
     [SerializeField] private GameObject continueButton;
     [SerializeField] private GameObject newGameButton;
